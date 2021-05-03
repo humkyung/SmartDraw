@@ -1,0 +1,6 @@
+; SmartDrawRsc.def : Declares the module parameters for the DLL.
+
+LIBRARY      "SmartDrawRsc_vc90_debug"
+
+EXPORTS
+    ; Explicit exports can go here
