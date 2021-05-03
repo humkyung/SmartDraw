@@ -1,0 +1,28 @@
+MV_AS--0
+
+rendering_parameters
+front	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+back	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+left	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+right	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+top	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+bottom	c:\program files\bentley\workspace\system\materials\pattern\grassgreenlawn.jpg
+end
+
+palette pt-tutorials.pal
+palette pt-tutorials.pal
+palette c:\doc-dgns\vis guide diagrams\pt-diagram\pt-diag-01.pal
+
+assign
+Glass Window
+"Building" 7
+Walls - ex 1
+"Building" 0
+Lamp Shade
+"Building" 6
+Objects - Ex 1
+"Objects" 2
+"Objects" 3
+Floor Ex 1
+"Building" 87
+end

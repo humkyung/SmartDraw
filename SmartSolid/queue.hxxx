@@ -1,0 +1,106 @@
+//:	name		: CQueue.h
+//	author		: baek hum kyung(baekhk@hanmail.net)
+//	date		:
+//	description	:
+//	update		:
+
+#ifndef	__QUEUE_H__
+#define	__QUEUE_H__
+
+#include <stdio.h>
+
+template <class T>
+class CQueue{
+public:
+//	constructure and destructure
+	CQueue();
+	virtual ~CQueue();
+    
+	bool Push(const T &e);
+	bool Pop(T &e);
+	void Clear();
+	bool IsEmpty();
+
+	class iterator;
+	friend class iterator;
+private:
+	struct cell{
+		cell(const T &e, cell *p) : element(e),next(p) {}
+		cell *next;
+		T element;
+        };
+	cell *first, *last;
+
+public:
+	class iterator{
+		public:
+			iterator(const CQueue<T> &q) :pc(q.first) { }
+			T *next(){
+				T *pt = 0;
+				if (pc != 0){
+					pt = &pc->element;
+					pc = pc->next;
+				}
+				return pt;
+			}
+		private:
+			cell *pc;
+	};
+
+};
+
+//--------------------------------------------------------------------------------------------
+template <class T>
+inline CQueue<T>::CQueue() : first(0), last(0){}
+
+template <class T>
+inline CQueue<T>::~CQueue(){
+	Clear();
+}
+
+//--------------------------------------------------------------------------------------------
+// the "implement" part
+
+//	push item to queue
+template <class T>
+bool CQueue<T>::Push(const T &e){
+	cell *p = new cell(e, 0);
+    
+	if(p == NULL)	return false;
+	if (first == 0)	first = p;
+	else		last->next = p;
+	last = p;
+
+	return true;
+}
+
+template <class T>
+void CQueue<T>::Clear(){
+	cell *p;
+
+	while (first != 0){
+		p = first;
+		first = first->next;
+		delete p;
+        }
+}
+
+//	pop item from queue
+template <class T>
+bool CQueue<T>::Pop(T &e){
+	if (first == 0)	return false;
+	cell *p = first;
+	if ((first = first->next) == 0)	last = 0;
+	e = p->element;
+	delete p;
+	
+	return true;
+}
+
+template <class T>
+bool CQueue<T>::IsEmpty(){
+	if(first == 0 && last == 0)	return true;
+	return false;
+}
+
+#endif

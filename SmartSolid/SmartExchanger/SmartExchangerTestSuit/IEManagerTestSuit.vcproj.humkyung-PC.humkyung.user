@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioUserFile
+	ProjectType="Visual C++"
+	Version="9.00"
+	ShowAllFiles="false"
+	>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			>
+			<DebugSettings
+				Command="$(TargetPath)"
+				WorkingDirectory=""
+				CommandArguments="D:\Projects\SmartDraw\SmartDraw_PDS\Data\DHOU\Model\Structure\as_28pr01a-.shx D:\Projects\SmartDraw\SmartDraw_PDS\Data\DHOU\Model\Structure\as_28pr01a-.prp D:\Projects\SmartDraw\SmartDraw_PDS\Data\DHOU\Setting\Default.ini"
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="HUMKYUNG-PC"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor="0"
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			>
+			<DebugSettings
+				Command="$(TargetPath)"
+				WorkingDirectory=""
+				CommandArguments="d:\Projects\SmartDraw\SmartDraw_PDS\Data\721560\Model\Equipment\ae_a04.sxf d:\Projects\SmartDraw\SmartDraw_PDS\Data\721560\Model\Equipment\ae_a04.dgn d:\Projects\SmartDraw\SmartDraw_PDS\Data\721560\Setting\Default.ini"
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="HUMKYUNG-PC"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor="0"
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+		</Configuration>
+	</Configurations>
+</VisualStudioUserFile>
