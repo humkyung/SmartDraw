@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeDebug|Win32">
+      <Configuration>UnicodeDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeRelease|Win32">
+      <Configuration>UnicodeRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>SmartDrawAnno</ProjectName>
+    <ProjectGuid>{ED4B7EA5-79D7-4600-B111-A9B185076B51}</ProjectGuid>
+    <RootNamespace>SmartDrawAnno</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_vc100_debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)_vc100</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\shared\boost\boost_1_58_0;..\..\shared\istools\inc;..\..\shared\istools\aImage;..\..\shared\istools\vftlib;..\..\shared\istools\3rdparty\sqlite3;..\..\shared\istools\3rdparty\soci-3.2.3\core;..\..\shared\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\SmartDrawModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_AFXDLL;MARKUP_STL;ADRAW_TAG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc100_debug.lib;sqlite3.lib;soci_sqlite3_3_2.lib;soci_core_3_2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)\$(TargetName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\shared\istools\lib\vc100;..\..\shared\lib;..\..\shared\boost\boost_1_58_0\lib32-msvc-10.0;..\lib;..\lib\soci_3_2_debug\VS2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImportLibrary>$(TargetDir)\$(TargetName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\shared\boost\boost_1_58_0;..\..\shared\istools\inc;..\..\shared\istools\aImage;..\..\shared\istools\vftlib;..\..\shared\istools\3rdparty\sqlite3;..\..\shared\istools\3rdparty\soci-3.2.3\core;..\..\shared\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\SmartDrawModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MARKUP_STL;ADRAW_TAG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc100.lib;sqlite3.lib;soci_sqlite3_3_2.lib;soci_core_3_2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)\$(TargetName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\shared\istools\lib\vc100;..\lib;..\..\shared\lib;..\..\shared\boost\boost_1_58_0\lib32-msvc-10.0;..\lib\soci_3_2\VS2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImportLibrary>$(TargetDir)\$(TargetName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>c:\Program Files\boost\boost_1_47;..\..\shared\istools\inc;..\..\shared\istools\aImage;..\..\shared\istools\vftlib;..\SmartDrawModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_AFXDLL;MARKUP_STL;ADRAW_TAG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc90_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\lib\$(ProjectName)_vc90_debug.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\shared\istools\lib\vc90;..\lib;..\..\shared\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>post-build.bat _debug</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>c:\Program Files\boost\boost_1_47;..\..\shared\istools\inc;..\..\shared\istools\aImage;..\..\shared\istools\vftlib;..\SmartDrawModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MARKUP_STL;ADRAW_TAG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc90_unicode.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\lib\$(ProjectName)_vc90_unicode.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\shared\istools\lib\vc90;..\lib;..\..\shared\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>post-build.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aDraw_EntTagShape.cpp" />
+    <ClCompile Include="aDraw_StruTagPos.cpp" />
+    <ClCompile Include="AnnoOption.cpp" />
+    <ClCompile Include="AnnoTerritory.cpp" />
+    <ClCompile Include="CellMap.cpp" />
+    <ClCompile Include="DimLevel.cpp" />
+    <ClCompile Include="DimLevel0.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">false</CompileAsManaged>
+    </ClCompile>
+    <ClCompile Include="DraftLeader.cpp" />
+    <ClCompile Include="Drawing.cpp" />
+    <ClCompile Include="ExtDivision.cpp" />
+    <ClCompile Include="ExternalTerritory.cpp" />
+    <ClCompile Include="ExtWriter.cpp" />
+    <ClCompile Include="GenerationOption.cpp" />
+    <ClCompile Include="InstrumentOption.cpp" />
+    <ClCompile Include="InternalTerritory.cpp" />
+    <ClCompile Include="KeyPlan.cpp" />
+    <ClCompile Include="KeyPlanHatching.cpp" />
+    <ClCompile Include="NorthMark.cpp" />
+    <ClCompile Include="NozzleChart.cpp" />
+    <ClCompile Include="NozzleOption.cpp" />
+    <ClCompile Include="OutsideOption.cpp" />
+    <ClCompile Include="PipeOption.cpp" />
+    <ClCompile Include="RevisionChart.cpp" />
+    <ClCompile Include="SmartDrawAnno.cpp" />
+    <ClCompile Include="SmartDrawAnnoCableTray.cpp" />
+    <ClCompile Include="SmartDrawAnnoElbow.cpp" />
+    <ClCompile Include="SmartDrawAnnoEntity.cpp" />
+    <ClCompile Include="SmartDrawAnnoEnv.cpp" />
+    <ClCompile Include="SmartDrawAnnoEqui.cpp" />
+    <ClCompile Include="SmartDrawAnnoInstrument.cpp" />
+    <ClCompile Include="SmartDrawAnnoItem.cpp" />
+    <ClCompile Include="SmartDrawAnnoModule.cpp" />
+    <ClCompile Include="SmartDrawAnnoNozzle.cpp" />
+    <ClCompile Include="SmartDrawAnnoPipe.cpp" />
+    <ClCompile Include="SmartDrawAnnoPlatform.cpp" />
+    <ClCompile Include="SmartDrawAnnoPos.cpp" />
+    <ClCompile Include="SmartDrawAnnoReducer.cpp" />
+    <ClCompile Include="SmartDrawAnnoSpecialty.cpp" />
+    <ClCompile Include="SmartDrawAnnoStru.cpp" />
+    <ClCompile Include="SmartDrawAnnoSupport.cpp" />
+    <ClCompile Include="SmartDrawAnnoTextStyle.cpp" />
+    <ClCompile Include="SmartDrawAnnoValve.cpp" />
+    <ClCompile Include="SmartDrawAnnoView.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SupportOption.cpp" />
+    <ClCompile Include="SutherlandHodgman.cpp" />
+    <ClCompile Include="TitleBlockData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aDraw_EntTagShape.h" />
+    <ClInclude Include="aDraw_StruTagPos.h" />
+    <ClInclude Include="AnnoOption.h" />
+    <ClInclude Include="AnnoTerritory.h" />
+    <ClInclude Include="CellMap.h" />
+    <ClInclude Include="DimLevel.h" />
+    <ClInclude Include="DimLevel0.h" />
+    <ClInclude Include="DraftLeader.h" />
+    <ClInclude Include="Drawing.h" />
+    <ClInclude Include="Enum.h" />
+    <ClInclude Include="ExtDivision.h" />
+    <ClInclude Include="ExternalTerritory.h" />
+    <ClInclude Include="ExtWriter.h" />
+    <ClInclude Include="GenerationOption.h" />
+    <ClInclude Include="InstrumentOption.h" />
+    <ClInclude Include="InternalTerritory.h" />
+    <ClInclude Include="KeyPlan.h" />
+    <ClInclude Include="KeyPlanHatching.h" />
+    <ClInclude Include="NorthMark.h" />
+    <ClInclude Include="NozzleChart.h" />
+    <ClInclude Include="NozzleOption.h" />
+    <ClInclude Include="OutsideOption.h" />
+    <ClInclude Include="PipeOption.h" />
+    <ClInclude Include="RevisionChart.h" />
+    <ClInclude Include="SmartDrawAnno.h" />
+    <ClInclude Include="SmartDrawAnnoCableTray.h" />
+    <ClInclude Include="SmartDrawAnnoElbow.h" />
+    <ClInclude Include="SmartDrawAnnoEntity.h" />
+    <ClInclude Include="SmartDrawAnnoEnv.h" />
+    <ClInclude Include="SmartDrawAnnoEqui.h" />
+    <ClInclude Include="SmartDrawAnnoInstrument.h" />
+    <ClInclude Include="SmartDrawAnnoItem.h" />
+    <ClInclude Include="SmartDrawAnnoModule.h" />
+    <ClInclude Include="SmartDrawAnnoNozzle.h" />
+    <ClInclude Include="SmartDrawAnnoPipe.h" />
+    <ClInclude Include="SmartDrawAnnoPlatform.h" />
+    <ClInclude Include="SmartDrawAnnoPos.h" />
+    <ClInclude Include="SmartDrawAnnoReducer.h" />
+    <ClInclude Include="SmartDrawAnnoSpecialty.h" />
+    <ClInclude Include="SmartDrawAnnoStru.h" />
+    <ClInclude Include="SmartDrawAnnoSupport.h" />
+    <ClInclude Include="SmartDrawAnnoTextStyle.h" />
+    <ClInclude Include="SmartDrawAnnoValve.h" />
+    <ClInclude Include="SmartDrawAnnoView.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SupportOption.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TitleBlockData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
