@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="F7DA5161-2DD0-4040-AB4A-7417F745F6C3" Name="SmartDraw_PDS" Language="1033" Version="1.0.0.0" Manufacturer="TechSun" UpgradeCode="5B3C43F1-3BD9-4F82-ADD0-D7AB78BC2194">
+        <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+        <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="A newer version of [ProductName] is already installed. Setup will now exit." AllowSameVersionUpgrades="yes" />
+        <MediaTemplate EmbedCab="yes" />
+        <WixVariable Id="WixUIBannerBmp" Value="TechSun.bmp" />
+        <Feature Id="ProductFeature" Title="SmartDraw_PDS" Level="1">
+            <ComponentGroupRef Id="SmartDraw_PDS" />
+        </Feature>
+    </Product>
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="BACKUP" Name="Backup">
+                <Directory Id="AUTOCAD" Name="AutoCAD">
+                    <Directory Id="AUTOCAD_18" Name="18" />
+                    <Directory Id="AUTOCAD_18_1" Name="18.1" />
+                    <Directory Id="AUTOCAD_19" Name="19" />
+                </Directory>
+                <Directory Id="DRAWINGS_" Name="Drawings" />
+                <Directory Id="SEED" Name="Seed" />
+                <Directory Id="V7" Name="V7" />
+                <Directory Id="V8" Name="V8" />
+            </Directory>
+            <Directory Id="DRAWINGS" Name="Drawings" />
+            <Directory Id="RESOURCES" Name="Resources">
+                <Directory Id="FONTS" Name="Fonts">
+                    <Directory Id="AUTOCAD_FONTS" Name="AutoCAD" />
+                    <Directory Id="MSTN_FONTS" Name="MSTN" />
+                </Directory>
+            </Directory>
+            <Directory Id="SETTING" Name="Setting" />
+            <Directory Id="TEMP" Name="Temp" />
+        </DirectoryRef>
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="DesktopFolder" Name="Desktop">
+                <Component Id="DesktopShortcut" Guid="44D6BF99-8203-4DF8-A7F4-1FDC717A6B8C" Feature="ProductFeature">
+                    <RegistryValue Root="HKCU" Key="Software\TechSun\SmartDraw_PDS" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+                    <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="SmartDraw_PDS" Description="Drawing Auto generation for PDS" Target="[INSTALLFOLDER]SmartDraw_PDS.exe" WorkingDirectory="INSTALLFOLDER" />
+                    <RemoveFolder Id="DesktopFolder" On="uninstall" />
+                </Component>
+            </Directory>
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="COMPANYFOLDER" Name="TechSun">
+                    <Directory Id="INSTALLFOLDER" Name="SmartDraw_PDS" />
+                </Directory>
+            </Directory>
+            <Directory Id="CommonAppDataFolder">
+                <Directory Id="MyAppDataFolder" Name="SmartDraw_PDS" />
+            </Directory>
+            <Directory Id="MSTNJPATH" />
+            <Directory Id="MSTNV8IPATH" />
+        </Directory>
+        <!--<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />-->
+        <!--<UIRef Id="WixUI_InstallDir"/>-->
+        <UI>
+            <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+            <UIRef Id="WixUI_Minimal" />
+            
+            <DialogRef Id="BrowseDlg" />
+            <Property Id="MSTNJPATH" Value="C:\" />
+            <Property Id="MSTNV8IPATH" Value="C:\" />
+            <Dialog Id="SelectMSTNDialog" Width="370" Height="270">
+				<Control Type="Text" Id="MSTNJText" Width="50" Height="10" X="19" Y="15" Text="MSTN J Path : " />
+                <Control Type="Text" Id="MSTNV8iText" Width="50" Height="10" X="19" Y="41" Text="MSTN V8i Path : " />
+                <Control Type="PathEdit" Id="MSTNJ_Path" Width="250" Height="15" X="82" Y="11" Property="MSTNJPATH" />
+                <Control Type="PushButton" Id="MSTNJBrowse" Width="21" Height="17" X="341" Y="11" Text="...">
+					<Publish Property="_BrowseProperty" Value="MSTNJPATH" Order="1">1</Publish>
+                    <Publish Event="SpawnDialog" Value="BrowseDlg" Order="2">1</Publish>
+				</Control>
+                <Control Type="PathEdit" Id="MSTNV8I_PATH" Width="254" Height="15" X="82" Y="38" Property="MSTNV8IPATH" />
+                <Control Id="Browse" Type="PushButton" X="341" Y="38" Width="22" Height="17" Text="...">
+                    <Publish Property="_BrowseProperty" Value="MSTNV8IPATH" Order="1">1</Publish>
+                    <Publish Event="SpawnDialog" Value="BrowseDlg" Order="2">1</Publish>
+                </Control>
+                
+                <Control Id="Next" Type="PushButton" X="308" Y="248" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)" />
+            </Dialog>
+            <Publish Dialog="SelectMSTNDialog" Control="Next" Event="EndDialog" Value="Return">1</Publish>
+        </UI>
+        <InstallUISequence>
+            <Show Dialog="SelectMSTNDialog" After="CostFinalize" />
+        </InstallUISequence>
+        <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch SmartDraw_PDS" />
+        <Property Id="WixShellExecTarget" Value="[INSTALLFOLDER]SmartDraw_PDS.exe" />
+        <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="SmartDraw_PDS">
+            <Component Id="ABASETOOL_VC100.DLL" Directory="INSTALLFOLDER" Guid="06579E5C-DA41-49C6-99BE-2DA504CAE32A">
+                <File Id="ABASETOOL_VC100.DLL" Name="aBaseTool_vc100.dll" Source=".\SmartDraw_PDS\Setup\aBaseTool_vc100.dll" />
+            </Component>
+            <Component Id="AIMAGE_VC100.DLL" Directory="INSTALLFOLDER" Guid="EC670855-DDA0-46A1-BD55-2B4E4985B7E6">
+                <File Id="AIMAGE_VC100.DLL" Name="aImage_vc100.dll" Source=".\SmartDraw_PDS\Setup\aImage_vc100.dll" />
+            </Component>
+            <Component Id="AMESH2D_VC100.DLL" Directory="INSTALLFOLDER" Guid="8855D541-7CCC-4E9C-B137-7A4C0F534BB3">
+                <File Id="AMESH2D_VC100.DLL" Name="aMesh2d_vc100.dll" Source=".\SmartDraw_PDS\Setup\aMesh2d_vc100.dll" />
+            </Component>
+            <Component Id="AUTOUP_VC100.DLL" Directory="INSTALLFOLDER" Guid="E7BD9F87-E472-4326-9928-EBB7DE4C3773">
+                <File Id="AUTOUP_VC100.DLL" Name="AutoUp_vc100.dll" Source=".\SmartDraw_PDS\Setup\AutoUp_vc100.dll" />
+            </Component>
+            <Component Id="BUGTRAP.DLL" Directory="INSTALLFOLDER" Guid="46556CA2-962A-4121-A6DF-9BA107F94CDB">
+                <File Id="BUGTRAP.DLL" Name="BugTrap.dll" Source=".\SmartDraw_PDS\Setup\BugTrap.dll" />
+            </Component>
+            <Component Id="DATAEXCHANGE.EXE" Directory="INSTALLFOLDER" Guid="768C333F-321A-4E44-8E6C-44B46BE794DF">
+                <File Id="DATAEXCHANGE.EXE" Name="DataExchange.exe" Source=".\SmartDraw_PDS\Setup\DataExchange.exe" />
+            </Component>
+            <Component Id="DATAEXCHANGE.PDB" Directory="INSTALLFOLDER" Guid="58A06DD6-EF92-4BF1-8EC5-F2B92D142207">
+                <File Id="DATAEXCHANGE.PDB" Name="DataExchange.pdb" Source=".\SmartDraw_PDS\Setup\DataExchange.pdb" />
+            </Component>
+            <Component Id="DGNLIB_VC100.DLL" Directory="INSTALLFOLDER" Guid="652AEC26-A4A6-4735-9FFD-32F4816BFD00">
+                <File Id="DGNLIB_VC100.DLL" Name="DgnLib_vc100.dll" Source=".\SmartDraw_PDS\Setup\DgnLib_vc100.dll" />
+            </Component>
+            <Component Id="DGNV7LIB_VC100.DLL" Directory="INSTALLFOLDER" Guid="4812EFCF-4804-42EF-BD6D-78E363F0BDA3">
+                <File Id="DGNV7LIB_VC100.DLL" Name="DgnV7Lib_vc100.dll" Source=".\SmartDraw_PDS\Setup\DgnV7Lib_vc100.dll" />
+            </Component>
+            <Component Id="EXTRACTDATABASE.EXE" Directory="INSTALLFOLDER" Guid="8F54A522-D2A7-48D4-A9C1-B77641577ACB">
+                <File Id="EXTRACTDATABASE.EXE" Name="ExtractDatabase.exe" Source=".\SmartDraw_PDS\Setup\ExtractDatabase.exe" />
+            </Component>
+            <Component Id="GEMBOX.SPREADSHEET.DLL" Directory="INSTALLFOLDER" Guid="6C683820-C7D3-4E91-A65D-84DAC63B3485">
+                <File Id="GEMBOX.SPREADSHEET.DLL" Name="GemBox.Spreadsheet.dll" Source=".\SmartDraw_PDS\Setup\GemBox.Spreadsheet.dll" />
+            </Component>
+            <Component Id="GETVERSION.EXE" Directory="INSTALLFOLDER" Guid="FBE2DE36-FC7A-4EC1-A7AA-0A7E33DECB73">
+                <File Id="GETVERSION.EXE" Name="GetVersion.exe" Source=".\SmartDraw_PDS\Setup\GetVersion.exe" />
+            </Component>
+            <Component Id="ISGUI_VC100.DLL" Directory="INSTALLFOLDER" Guid="69175980-C390-4382-A1F7-9A44B548738B">
+                <File Id="ISGUI_VC100.DLL" Name="isgui_vc100.dll" Source=".\SmartDraw_PDS\Setup\isgui_vc100.dll" />
+            </Component>
+            <Component Id="ISUTIL_VC100.DLL" Directory="INSTALLFOLDER" Guid="2F542E4C-9437-4B68-977C-AE85E2E6A201">
+                <File Id="ISUTIL_VC100.DLL" Name="isutil_vc100.dll" Source=".\SmartDraw_PDS\Setup\isutil_vc100.dll" />
+            </Component>
+            <Component Id="IS_VC100.DLL" Directory="INSTALLFOLDER" Guid="946FBB80-6741-4A69-B083-E27B17E784D1">
+                <File Id="IS_VC100.DLL" Name="is_vc100.dll" Source=".\SmartDraw_PDS\Setup\is_vc100.dll" />
+            </Component>
+            <Component Id="MFC90.DLL" Directory="INSTALLFOLDER" Guid="175E5D35-254C-43FA-B106-4669AF408A9A">
+                <File Id="MFC90.DLL" Name="mfc90.dll" Source=".\SmartDraw_PDS\Setup\mfc90.dll" />
+            </Component>
+            <Component Id="MSVCP90.DLL" Directory="INSTALLFOLDER" Guid="28495683-9998-469D-BAAF-5CF02DBA91B3">
+                <File Id="MSVCP90.DLL" Name="msvcp90.dll" Source=".\SmartDraw_PDS\Setup\msvcp90.dll" />
+            </Component>
+            <Component Id="MSVCR90.DLL" Directory="INSTALLFOLDER" Guid="FF54C10A-CC0E-48FE-B269-1D6E8DE7B2BD">
+                <File Id="MSVCR90.DLL" Name="msvcr90.dll" Source=".\SmartDraw_PDS\Setup\msvcr90.dll" />
+            </Component>
+            <Component Id="OCI.DLL" Directory="INSTALLFOLDER" Guid="55671466-7A19-4884-BEA2-DB66DD687297">
+                <File Id="OCI.DLL" Name="oci.dll" Source=".\SmartDraw_PDS\Setup\oci.dll" />
+            </Component>
+            <Component Id="OCIJDBC11.DLL" Directory="INSTALLFOLDER" Guid="6F6BA2ED-0911-4811-B0EC-BEC4E90EF0A1">
+                <File Id="OCIJDBC11.DLL" Name="ocijdbc11.dll" Source=".\SmartDraw_PDS\Setup\ocijdbc11.dll" />
+            </Component>
+            <Component Id="OCIW32.DLL" Directory="INSTALLFOLDER" Guid="0CC8F82A-8D84-4DF2-AC46-D7795B423C5A">
+                <File Id="OCIW32.DLL" Name="ociw32.dll" Source=".\SmartDraw_PDS\Setup\ociw32.dll" />
+            </Component>
+            <Component Id="ORANNZSBB11.DLL" Directory="INSTALLFOLDER" Guid="7FED78E6-2F87-49C4-A58D-CF347D9E7A1E">
+                <File Id="ORANNZSBB11.DLL" Name="orannzsbb11.dll" Source=".\SmartDraw_PDS\Setup\orannzsbb11.dll" />
+            </Component>
+            <Component Id="ORAOCCI11.DLL" Directory="INSTALLFOLDER" Guid="7D5EB85E-7905-44AD-990F-BF9D4F071C2A">
+                <File Id="ORAOCCI11.DLL" Name="oraocci11.dll" Source=".\SmartDraw_PDS\Setup\oraocci11.dll" />
+            </Component>
+            <Component Id="ORAOCIEI11.DLL" Directory="INSTALLFOLDER" Guid="5C459CAA-2B19-4538-B1E1-F2193C9703C7">
+                <File Id="ORAOCIEI11.DLL" Name="oraociei11.dll" Source=".\SmartDraw_PDS\Setup\oraociei11.dll" />
+            </Component>
+            <Component Id="ORAOCIICUS11.DLL" Directory="INSTALLFOLDER" Guid="2B019489-0993-4D04-A2A5-88C7CB249E78">
+                <File Id="ORAOCIICUS11.DLL" Name="oraociicus11.dll" Source=".\SmartDraw_PDS\Setup\oraociicus11.dll" />
+            </Component>
+            <Component Id="ORASQL11.DLL" Directory="INSTALLFOLDER" Guid="DEBD1D18-EAA6-4FBF-B1A0-EB945DBAD13F">
+                <File Id="ORASQL11.DLL" Name="orasql11.dll" Source=".\SmartDraw_PDS\Setup\orasql11.dll" />
+            </Component>
+            <Component Id="PYTHON27.DLL" Directory="INSTALLFOLDER" Guid="A9D43B53-5E69-4021-8798-25612A2337BE">
+                <File Id="PYTHON27.DLL" Name="python27.dll" Source=".\SmartDraw_PDS\Setup\python27.dll" />
+            </Component>
+            <Component Id="PYTHONCOM27.DLL" Directory="INSTALLFOLDER" Guid="84018286-4D9D-4525-AE48-DD0272936831">
+                <File Id="PYTHONCOM27.DLL" Name="pythoncom27.dll" Source=".\SmartDraw_PDS\Setup\pythoncom27.dll" />
+            </Component>
+            <Component Id="PYWINTYPES27.DLL" Directory="INSTALLFOLDER" Guid="AF908435-6F63-453E-A92E-EFBB18AFFA6E">
+                <File Id="PYWINTYPES27.DLL" Name="pywintypes27.dll" Source=".\SmartDraw_PDS\Setup\pywintypes27.dll" />
+            </Component>
+            <Component Id="README.TXT" Directory="INSTALLFOLDER" Guid="2B8BC792-648E-4671-8743-778A41B7DFB0">
+                <File Id="README.TXT" Name="readme.txt" Source=".\SmartDraw_PDS\Setup\readme.txt" />
+            </Component>
+            <Component Id="SMARTDRAW.EXE" Directory="INSTALLFOLDER" Guid="E9E89A0C-2F03-489E-BEEE-CC8610D91237">
+                <File Id="SMARTDRAW.EXE" Name="SmartDraw.exe" Source=".\SmartDraw_PDS\Setup\SmartDraw.exe" />
+            </Component>
+            <Component Id="SMARTDRAWANNO_VC100.DLL" Directory="INSTALLFOLDER" Guid="68BBDFCC-5BB3-4F8D-B946-81D74047C792">
+                <File Id="SMARTDRAWANNO_VC100.DLL" Name="SmartDrawAnno_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartDrawAnno_vc100.dll" />
+            </Component>
+            <Component Id="SMARTDRAWFRAMEWORK.DLL" Directory="INSTALLFOLDER" Guid="47AE7E56-5C46-47D7-BF5F-159A6E02AB08">
+                <File Id="SMARTDRAWFRAMEWORK.DLL" Name="SmartDrawFramework.dll" Source=".\SmartDraw_PDS\Setup\SmartDrawFramework.dll" />
+            </Component>
+            <Component Id="SMARTDRAWMODULE_VC100.DLL" Directory="INSTALLFOLDER" Guid="152BC9BC-7825-47AF-96BD-7842BEE7D86D">
+                <File Id="SMARTDRAWMODULE_VC100.DLL" Name="SmartDrawModule_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartDrawModule_vc100.dll" />
+            </Component>
+            <Component Id="SMARTDRAWPDSMODULE_VC100.DLL" Directory="INSTALLFOLDER" Guid="B0378B79-D9F6-4145-BB20-452ECDF2DFE9">
+                <File Id="SMARTDRAWPDSMODULE_VC100.DLL" Name="SmartDrawPDSModule_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartDrawPDSModule_vc100.dll" />
+            </Component>
+            <Component Id="SMARTDRAWRSC_VC100.DLL" Directory="INSTALLFOLDER" Guid="5795EC39-F4EA-495F-AC02-9556575FCA8B">
+                <File Id="SMARTDRAWRSC_VC100.DLL" Name="SmartDrawRsc_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartDrawRsc_vc100.dll" />
+            </Component>
+            <Component Id="SMARTEXCHANGER_VC100.DLL" Directory="INSTALLFOLDER" Guid="EB35A9C5-F89A-4A4F-AEB8-FE2D032621A7">
+                <File Id="SMARTEXCHANGER_VC100.DLL" Name="SmartExchanger_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartExchanger_vc100.dll" />
+            </Component>
+            <Component Id="SMARTHSR_VC100.DLL" Directory="INSTALLFOLDER" Guid="3232DDE1-9CED-452C-A532-E1FA4700484D">
+                <File Id="SMARTHSR_VC100.DLL" Name="SmartHSR_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartHSR_vc100.dll" />
+            </Component>
+            <Component Id="SMARTLMSLIB_VC100.DLL" Directory="INSTALLFOLDER" Guid="F8ABE940-2F65-4454-81B7-1C1A84367E92">
+                <File Id="SMARTLMSLIB_VC100.DLL" Name="SmartLMSLib_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartLMSLib_vc100.dll" />
+            </Component>
+            <Component Id="SMARTLMSLIB_VC100.LIB" Directory="INSTALLFOLDER" Guid="1EC814F3-FBA3-4E0F-B42F-344A3A3445DD">
+                <File Id="SMARTLMSLIB_VC100.LIB" Name="SmartLMSLib_vc100.lib" Source=".\SmartDraw_PDS\Setup\SmartLMSLib_vc100.lib" />
+            </Component>
+            <Component Id="SMARTSOLID_VC100.DLL" Directory="INSTALLFOLDER" Guid="34488144-4EDE-4185-A24C-2779D39EEFCD">
+                <File Id="SMARTSOLID_VC100.DLL" Name="SmartSolid_vc100.dll" Source=".\SmartDraw_PDS\Setup\SmartSolid_vc100.dll" />
+            </Component>
+            <Component Id="SOCI_CORE_3_2.DLL" Directory="INSTALLFOLDER" Guid="87C93D86-095C-44ED-A288-9648EC0EE118">
+                <File Id="SOCI_CORE_3_2.DLL" Name="soci_core_3_2.dll" Source=".\SmartDraw_PDS\Setup\soci_3_2\soci_core_3_2.dll" />
+            </Component>
+            <Component Id="SOCI_SQLITE3_3_2.DLL" Directory="INSTALLFOLDER" Guid="7950976C-CFD7-4FCC-8056-1B3DDF9D4020">
+                <File Id="SOCI_SQLITE3_3_2.DLL" Name="soci_sqlite3_3_2.dll" Source=".\SmartDraw_PDS\Setup\soci_3_2\soci_sqlite3_3_2.dll" />
+            </Component>
+            <Component Id="SQLITE.INTEROP.DLL" Directory="INSTALLFOLDER" Guid="8E972D18-0265-4404-AB06-B5A58A56A51D">
+                <File Id="SQLITE.INTEROP.DLL" Name="SQLite.Interop.dll" Source=".\SmartDraw_PDS\Setup\SQLite.Interop.dll" />
+            </Component>
+            <Component Id="SQLITE3.DLL" Directory="INSTALLFOLDER" Guid="C4D3C737-1274-4AF4-8DC3-E5B41900BF8C">
+                <File Id="SQLITE3.DLL" Name="sqlite3.dll" Source=".\SmartDraw_PDS\Setup\sqlite3.dll" />
+            </Component>
+            <Component Id="SQLITE3.LIB" Directory="INSTALLFOLDER" Guid="99224F2E-CA1B-41FC-9AD0-4CFF3054BEE6">
+                <File Id="SQLITE3.LIB" Name="sqlite3.lib" Source=".\SmartDraw_PDS\Setup\sqlite3.lib" />
+            </Component>
+            <Component Id="SYSTEM.DATA.SQLITE.DLL" Directory="INSTALLFOLDER" Guid="66CF0111-C620-4924-BF69-6EC8E83884CD">
+                <File Id="SYSTEM.DATA.SQLITE.DLL" Name="System.Data.SQLite.dll" Source=".\SmartDraw_PDS\Setup\System.Data.SQLite.dll" />
+            </Component>
+            <Component Id="SYSTEM.DATA.SQLITE.LINQ.DLL" Directory="INSTALLFOLDER" Guid="3D0790FF-279C-4FB7-86DD-8DF3B28EC516">
+                <File Id="SYSTEM.DATA.SQLITE.LINQ.DLL" Name="System.Data.SQLite.Linq.dll" Source=".\SmartDraw_PDS\Setup\System.Data.SQLite.Linq.dll" />
+            </Component>
+            <Component Id="TECHSUN.BMP" Directory="INSTALLFOLDER" Guid="0E29A74B-7F1B-4DB3-914D-0C85F695373E">
+                <File Id="TECHSUN.BMP" Name="TechSun.bmp" Source=".\SmartDraw_PDS\Setup\TechSun.bmp" />
+            </Component>
+            <Component Id="VERSIONNO.NSI" Directory="INSTALLFOLDER" Guid="3616950E-966A-40ED-B24E-200126D69555">
+                <File Id="VERSIONNO.NSI" Name="VersionNo.nsi" Source=".\SmartDraw_PDS\Setup\VersionNo.nsi" />
+            </Component>
+            <Component Id="VFTLIB_VC100.DLL" Directory="INSTALLFOLDER" Guid="7608BF23-2441-4371-8D95-BA34917FC44A">
+                <File Id="VFTLIB_VC100.DLL" Name="vftlib_vc100.dll" Source=".\SmartDraw_PDS\Setup\vftlib_vc100.dll" />
+            </Component>
+            <Component Id="BORDER.DGN.CFG" Directory="BACKUP" Guid="FD184182-F74A-4EA4-A373-3AD92AAB2EFB">
+                <File Id="BORDER.DGN.CFG" Name="border.dgn.cfg" Source=".\SmartDraw_PDS\Setup\Backup\border.dgn.cfg" />
+            </Component>
+            <Component Id="CABLETRAY_AUTOCAD.INI" Directory="BACKUP" Guid="9AA2E705-2007-40CB-90C3-4428843AF7DA">
+                <File Id="CABLETRAY_AUTOCAD.INI" Name="CableTray_AutoCAD.ini" Source=".\SmartDraw_PDS\Setup\Backup\CableTray_AutoCAD.ini" />
+            </Component>
+            <Component Id="CABLETRAY_MSTN.INI" Directory="BACKUP" Guid="CCD76CB8-6607-4D89-BD20-E2E0B4F519F6">
+                <File Id="CABLETRAY_MSTN.INI" Name="CableTray_MSTN.ini" Source=".\SmartDraw_PDS\Setup\Backup\CableTray_MSTN.ini" />
+            </Component>
+            <Component Id="DEFAULT.PRJ" Directory="BACKUP" Guid="39F23D3C-434C-458B-84F1-C99D5F74EE8C">
+                <File Id="DEFAULT.PRJ" Name="Default.prj" Source=".\SmartDraw_PDS\Setup\Backup\Default.prj" />
+            </Component>
+            <Component Id="ITEMS.LST" Directory="BACKUP" Guid="D5E2CC17-4B8C-444A-9EA0-172B4459572B">
+                <File Id="ITEMS.LST" Name="Items.lst" Source=".\SmartDraw_PDS\Setup\Backup\Items.lst" />
+            </Component>
+            <Component Id="OPENINGHOLE_AUTOCAD.INI" Directory="BACKUP" Guid="FB0AB51D-7EBF-4BB3-ACB2-FF4C9273BF01">
+                <File Id="OPENINGHOLE_AUTOCAD.INI" Name="OpeningHole_AutoCAD.ini" Source=".\SmartDraw_PDS\Setup\Backup\OpeningHole_AutoCAD.ini" />
+            </Component>
+            <Component Id="OPENINGHOLE_MSTN.INI" Directory="BACKUP" Guid="1DC37701-632C-4C08-8B64-BFDDABBDEDDE">
+                <File Id="OPENINGHOLE_MSTN.INI" Name="OpeningHole_MSTN.ini" Source=".\SmartDraw_PDS\Setup\Backup\OpeningHole_MSTN.ini" />
+            </Component>
+            <Component Id="PDS.MDB" Directory="BACKUP" Guid="8253DD1E-F587-4C55-9A79-11F406557594">
+                <File Id="PDS.MDB" Name="PDS.mdb" Source=".\SmartDraw_PDS\Setup\Backup\PDS.mdb" />
+            </Component>
+            <Component Id="PIPING_AUTOCAD.INI" Directory="BACKUP" Guid="3BD0F0EB-572E-46B4-98AD-4B2AE6EC2E5F">
+                <File Id="PIPING_AUTOCAD.INI" Name="Piping_AutoCAD.ini" Source=".\SmartDraw_PDS\Setup\Backup\Piping_AutoCAD.ini" />
+            </Component>
+            <Component Id="PIPING_MSTN.INI" Directory="BACKUP" Guid="9DD0FB3B-CD3B-4647-B3BD-B8B5F7455663">
+                <File Id="PIPING_MSTN.INI" Name="Piping_MSTN.ini" Source=".\SmartDraw_PDS\Setup\Backup\Piping_MSTN.ini" />
+            </Component>
+            <Component Id="REPORT.XLSX" Directory="BACKUP" Guid="1D699377-FB04-457B-865E-0952FD848A75">
+                <File Id="REPORT.XLSX" Name="report.xlsx" Source=".\SmartDraw_PDS\Setup\Backup\report.xlsx" />
+            </Component>
+            <Component Id="SMARTDRAW.PDF" Directory="BACKUP" Guid="0BDAC02C-75DF-4C35-8832-60F181A8BA75">
+                <File Id="SMARTDRAW.PDF" Name="SmartDraw.pdf" Source=".\SmartDraw_PDS\Setup\Backup\SmartDraw.pdf" />
+            </Component>
+            <Component Id="SMARTDRAW_PROJECT.MDB" Directory="BACKUP" Guid="996BA311-EA3A-410C-AAAA-C47B8BB2AC3A">
+                <File Id="SMARTDRAW_PROJECT.MDB" Name="SmartDraw_Project.mdb" Source=".\SmartDraw_PDS\Setup\Backup\SmartDraw_Project.mdb" />
+            </Component>
+            <Component Id="T_SMARTDRAW_PROJECT.XML" Directory="BACKUP" Guid="C3C885DC-8DDF-472F-BABD-06C5E6563296">
+                <File Id="T_SMARTDRAW_PROJECT.XML" Name="T_SMARTDRAW_PROJECT.XML" Source=".\SmartDraw_PDS\Setup\Backup\T_SMARTDRAW_PROJECT.XML" />
+            </Component>
+            <Component Id="DWGWRITER.NET.DLL" Directory="AUTOCAD_18" Guid="8ECFE4B3-4F6E-4BE2-91B6-839451AEE72C">
+                <File Id="DWGWRITER.NET.DLL" Name="DwgWriter.NET.dll" Source=".\SmartDraw_PDS\Setup\Backup\AutoCAD\18\DwgWriter.NET.dll" />
+            </Component>
+            <Component Id="DWGWRITER.NET.DLL_1" Directory="AUTOCAD_18_1" Guid="09DA8957-2291-4614-B152-8D26A82F8363">
+                <File Id="DWGWRITER.NET.DLL_1" Name="DwgWriter.NET.dll" Source=".\SmartDraw_PDS\Setup\Backup\AutoCAD\18.1\DwgWriter.NET.dll" />
+            </Component>
+            <Component Id="DWGWRITER.NET.DLL_2" Directory="AUTOCAD_19" Guid="E853DF66-4BAE-45EB-878E-6A5DCA524ADE">
+                <File Id="DWGWRITER.NET.DLL_2" Name="DwgWriter.NET.dll" Source=".\SmartDraw_PDS\Setup\Backup\AutoCAD\19\DwgWriter.NET.dll" />
+            </Component>
+            <Component Id="CABLETRAY.ELE" Directory="DRAWINGS_" Guid="7824192A-1EF4-49E9-8A38-067F9977FB61">
+                <File Id="CABLETRAY.ELE" Name="CableTray.ele" Source=".\SmartDraw_PDS\Setup\Backup\Drawings\CableTray.ele" />
+            </Component>
+            <Component Id="CABLETRAY.XML" Directory="DRAWINGS_" Guid="66AC4771-A2DB-4DA7-B208-8F1E5E416467">
+                <File Id="CABLETRAY.XML" Name="CableTray.XML" Source=".\SmartDraw_PDS\Setup\Backup\Drawings\CableTray.XML" />
+            </Component>
+            <Component Id="OPENINGHOLE.ELE" Directory="DRAWINGS_" Guid="6EA1565C-3DC1-4694-97A0-AB9D8CEA9713">
+                <File Id="OPENINGHOLE.ELE" Name="OpeningHole.ele" Source=".\SmartDraw_PDS\Setup\Backup\Drawings\OpeningHole.ele" />
+            </Component>
+            <Component Id="OPENINGHOLE.XML" Directory="DRAWINGS_" Guid="55993680-D280-44E8-93FE-D1289B3725DB">
+                <File Id="OPENINGHOLE.XML" Name="OpeningHole.XML" Source=".\SmartDraw_PDS\Setup\Backup\Drawings\OpeningHole.XML" />
+            </Component>
+            <Component Id="PIPING.ELE" Directory="DRAWINGS_" Guid="9CE8F328-E322-4CA8-B238-87224620E0EA">
+                <File Id="PIPING.ELE" Name="Piping.ele" Source=".\SmartDraw_PDS\Setup\Backup\Drawings\Piping.ele" />
+            </Component>
+            <Component Id="PIPING.XML" Directory="DRAWINGS_" Guid="F480D9EC-DC0B-473F-A804-212FC7EA199B">
+                <File Id="PIPING.XML" Name="Piping.XML" Source=".\SmartDraw_PDS\Setup\Backup\Drawings\Piping.XML" />
+            </Component>
+            <Component Id="SEED.DWG" Directory="SEED" Guid="C7C79AA9-589C-4ADF-9CF0-98F29C7EA9A3">
+                <File Id="SEED.DWG" Name="seed.dwg" Source=".\SmartDraw_PDS\Setup\Backup\Seed\seed.dwg" />
+            </Component>
+            <Component Id="SEED3D.DGN" Directory="SEED" Guid="81701B9A-6137-46D7-B9A9-1BF923B97B93">
+                <File Id="SEED3D.DGN" Name="seed3d.dgn" Source=".\SmartDraw_PDS\Setup\Backup\Seed\seed3d.dgn" />
+            </Component>
+            <Component Id="ADGNV7.MA" Directory="V7" Guid="1CD88994-958A-42B9-811B-897D5760AC52">
+                <File Id="ADGNV7.MA" Name="aDgnV7.ma" Source=".\SmartDraw_PDS\Setup\Backup\V7\aDgnV7.ma" />
+            </Component>
+            <Component Id="APICKTOOL.MA" Directory="V7" Guid="3707881D-4244-4E6C-8A59-B140B8DD6E4C">
+                <File Id="APICKTOOL.MA" Name="aPickTool.ma" Source=".\SmartDraw_PDS\Setup\Backup\V7\aPickTool.ma" />
+            </Component>
+            <Component Id="TAGEDITOR.MA" Directory="V7" Guid="C239364C-ECCE-4D9D-B0BE-A48802C5645E">
+                <File Id="TAGEDITOR.MA" Name="TagEditor.ma" Source=".\SmartDraw_PDS\Setup\Backup\V7\TagEditor.ma" />
+            </Component>
+            <Component Id="ADGNWRITER.DLL" Directory="MSTNV8IPATH" Guid="E5E7B4AB-F3F0-48FD-8D79-6E5A1C5140A8">
+                <File Id="ADGNWRITER.DLL" Name="aDgnWriter.dll" Source=".\SmartDraw_PDS\Setup\Backup\V8\aDgnWriter.dll" />
+            </Component>
+            <Component Id="ADGNWRITER.MA" Directory="MSTNV8IPATH" Guid="84696257-6C66-4275-A635-41B44C032062">
+                <File Id="ADGNWRITER.MA" Name="aDgnWriter.ma" Source=".\SmartDraw_PDS\Setup\Backup\V8\aDgnWriter.ma" />
+            </Component>
+            <Component Id="APICKTOOL.DLL" Directory="MSTNV8IPATH" Guid="D2996BDB-D0C1-451A-9C87-E316B3690F6A">
+                <File Id="APICKTOOL.DLL" Name="aPickTool.dll" Source=".\SmartDraw_PDS\Setup\Backup\V8\aPickTool.dll" />
+            </Component>
+            <Component Id="APICKTOOL.MA_1" Directory="MSTNV8IPATH" Guid="7D0E412C-63B7-46BF-BF09-2AF18B316DE0">
+                <File Id="APICKTOOL.MA_1" Name="aPickTool.ma" Source=".\SmartDraw_PDS\Setup\Backup\V8\aPickTool.ma" />
+            </Component>
+            <Component Id="MFC80U.DLL" Directory="MSTNV8IPATH" Guid="0B095EE6-9EA0-4FF3-AF7A-C1A5FD61ACE9">
+                <File Id="MFC80U.DLL" Name="mfc80u.dll" Source=".\SmartDraw_PDS\Setup\Backup\V8\mfc80u.dll" />
+            </Component>
+            <Component Id="MSVCR80.DLL" Directory="MSTNV8IPATH" Guid="6AA96B53-7168-4877-9F32-6E488F27F851">
+                <File Id="MSVCR80.DLL" Name="msvcr80.dll" Source=".\SmartDraw_PDS\Setup\Backup\V8\msvcr80.dll" />
+            </Component>
+            <Component Id="PIPINGDRAWING_VC100.DLL" Directory="DRAWINGS" Guid="CCDD69D3-B38E-488F-81A1-84FD1D54B603">
+                <File Id="PIPINGDRAWING_VC100.DLL" Name="PipingDrawing_vc100.dll" Source=".\SmartDraw_PDS\Setup\Drawings\PipingDrawing_vc100.dll" />
+            </Component>
+            <Component Id="EQUIPMENT_HATCHING.BMP" Directory="RESOURCES" Guid="C27EF5D5-B583-44B2-BCFB-ECBF8024FBC4">
+                <File Id="EQUIPMENT_HATCHING.BMP" Name="equipment_hatching.bmp" Source=".\SmartDraw_PDS\Setup\Resource\equipment_hatching.bmp" />
+            </Component>
+            <Component Id="FLOW_MARK.BMP" Directory="RESOURCES" Guid="18C046A2-7604-4A22-BCD6-F7F0A86691EE">
+                <File Id="FLOW_MARK.BMP" Name="flow_mark.bmp" Source=".\SmartDraw_PDS\Setup\Resource\flow_mark.bmp" />
+            </Component>
+            <Component Id="GRID_NO.BMP" Directory="RESOURCES" Guid="53259410-5A67-45AD-8F93-29DE28870F6E">
+                <File Id="GRID_NO.BMP" Name="grid_no.bmp" Source=".\SmartDraw_PDS\Setup\Resource\grid_no.bmp" />
+            </Component>
+            <Component Id="HATCHING_MARK_00.BMP" Directory="RESOURCES" Guid="BCA72DB7-CD6F-44DF-90DB-065BE1BF4BE4">
+                <File Id="HATCHING_MARK_00.BMP" Name="hatching_mark_00.bmp" Source=".\SmartDraw_PDS\Setup\Resource\hatching_mark_00.bmp" />
+            </Component>
+            <Component Id="HATCHING_MARK_01.BMP" Directory="RESOURCES" Guid="54AEA229-C699-4BD7-A51E-6A367A5FE550">
+                <File Id="HATCHING_MARK_01.BMP" Name="hatching_mark_01.bmp" Source=".\SmartDraw_PDS\Setup\Resource\hatching_mark_01.bmp" />
+            </Component>
+            <Component Id="HATCHING_MARK_02.BMP" Directory="RESOURCES" Guid="D6942868-63C6-4DC2-BA0E-10D73F72FD30">
+                <File Id="HATCHING_MARK_02.BMP" Name="hatching_mark_02.bmp" Source=".\SmartDraw_PDS\Setup\Resource\hatching_mark_02.bmp" />
+            </Component>
+            <Component Id="HATCHING_MARK_03.BMP" Directory="RESOURCES" Guid="6821FA5C-F20E-484F-9E06-FFCE8B5E0F92">
+                <File Id="HATCHING_MARK_03.BMP" Name="hatching_mark_03.bmp" Source=".\SmartDraw_PDS\Setup\Resource\hatching_mark_03.bmp" />
+            </Component>
+            <Component Id="HATCHING_MARK_04.BMP" Directory="RESOURCES" Guid="93155F6B-5C73-4BF9-981D-49A2BA13975B">
+                <File Id="HATCHING_MARK_04.BMP" Name="hatching_mark_04.bmp" Source=".\SmartDraw_PDS\Setup\Resource\hatching_mark_04.bmp" />
+            </Component>
+            <Component Id="HATCHING_MARK_05.BMP" Directory="RESOURCES" Guid="D734D82F-986A-4A84-8531-3A12F6A7FF24">
+                <File Id="HATCHING_MARK_05.BMP" Name="hatching_mark_05.bmp" Source=".\SmartDraw_PDS\Setup\Resource\hatching_mark_05.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_ENCLOSURE_00.BMP" Directory="RESOURCES" Guid="EE0680B6-B22E-4FB5-89A8-7B1E6A78F191">
+                <File Id="INSTRUMENT_ENCLOSURE_00.BMP" Name="instrument_enclosure_00.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_enclosure_00.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_ENCLOSURE_01.BMP" Directory="RESOURCES" Guid="0B1C5FF7-B1FA-4401-BC93-6F75EBF8D236">
+                <File Id="INSTRUMENT_ENCLOSURE_01.BMP" Name="instrument_enclosure_01.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_enclosure_01.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_ENCLOSURE_02.BMP" Directory="RESOURCES" Guid="FA1939A9-ADBF-4A38-9690-D741D248B18E">
+                <File Id="INSTRUMENT_ENCLOSURE_02.BMP" Name="instrument_enclosure_02.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_enclosure_02.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_ENCLOSURE_03.BMP" Directory="RESOURCES" Guid="9718A5D3-CCA9-4CD7-A469-3A2E634D74D7">
+                <File Id="INSTRUMENT_ENCLOSURE_03.BMP" Name="instrument_enclosure_03.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_enclosure_03.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_ENCLOSURE_04.BMP" Directory="RESOURCES" Guid="B75CECD4-D533-40CA-9700-8C4B07780E9C">
+                <File Id="INSTRUMENT_ENCLOSURE_04.BMP" Name="instrument_enclosure_04.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_enclosure_04.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_LABEL_TYPE_00.BMP" Directory="RESOURCES" Guid="06721E73-A441-4DDB-A4BF-F9B16D92A314">
+                <File Id="INSTRUMENT_LABEL_TYPE_00.BMP" Name="instrument_label_type_00.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_label_type_00.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_LABEL_TYPE_01_1.BMP" Directory="RESOURCES" Guid="BCDFC8E5-0C46-4D6E-8E29-8643BC63619A">
+                <File Id="INSTRUMENT_LABEL_TYPE_01_1.BMP" Name="instrument_label_type_01-1.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_label_type_01-1.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_LABEL_TYPE_01.BMP" Directory="RESOURCES" Guid="9F6A6856-9121-4C2A-A43E-4220BAB4D972">
+                <File Id="INSTRUMENT_LABEL_TYPE_01.BMP" Name="instrument_label_type_01.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_label_type_01.bmp" />
+            </Component>
+            <Component Id="INSTRUMENT_LABEL_TYPE_02.BMP" Directory="RESOURCES" Guid="66DC39EF-4D6B-4638-B30B-F72120118062">
+                <File Id="INSTRUMENT_LABEL_TYPE_02.BMP" Name="instrument_label_type_02.bmp" Source=".\SmartDraw_PDS\Setup\Resource\instrument_label_type_02.bmp" />
+            </Component>
+            <Component Id="KEY_PLAN_HATCHING.BMP" Directory="RESOURCES" Guid="8ADE8C5D-8A05-497D-B9D1-72639FC8D6DA">
+                <File Id="KEY_PLAN_HATCHING.BMP" Name="key_plan_hatching.bmp" Source=".\SmartDraw_PDS\Setup\Resource\key_plan_hatching.bmp" />
+            </Component>
+            <Component Id="LINENO_EXTERNAL_01.BMP" Directory="RESOURCES" Guid="8B8417F1-267B-4908-A8F2-F54927080A63">
+                <File Id="LINENO_EXTERNAL_01.BMP" Name="lineno_external_01.bmp" Source=".\SmartDraw_PDS\Setup\Resource\lineno_external_01.bmp" />
+            </Component>
+            <Component Id="NOZZLE.BMP" Directory="RESOURCES" Guid="ACFA983F-2739-472F-830D-1262C561DFF3">
+                <File Id="NOZZLE.BMP" Name="nozzle.bmp" Source=".\SmartDraw_PDS\Setup\Resource\nozzle.bmp" />
+            </Component>
+            <Component Id="NOZZLECHART.BMP" Directory="RESOURCES" Guid="6D7EEB60-DF7E-41D9-AF63-5DB2C44683B2">
+                <File Id="NOZZLECHART.BMP" Name="NozzleChart.bmp" Source=".\SmartDraw_PDS\Setup\Resource\NozzleChart.bmp" />
+            </Component>
+            <Component Id="OPENINGHOLE.SVG" Directory="RESOURCES" Guid="0303C734-2D27-4865-BAD2-7DB268836690">
+                <File Id="OPENINGHOLE.SVG" Name="OpeningHole.svg" Source=".\SmartDraw_PDS\Setup\Resource\OpeningHole.svg" />
+            </Component>
+            <Component Id="OPENINGHOLE_BOX.BMP" Directory="RESOURCES" Guid="78AA5449-AC57-4488-B3F5-9730C33F279A">
+                <File Id="OPENINGHOLE_BOX.BMP" Name="OpeningHole_Box.bmp" Source=".\SmartDraw_PDS\Setup\Resource\OpeningHole_Box.bmp" />
+            </Component>
+            <Component Id="OPENINGHOLE_POLYLINE.BMP" Directory="RESOURCES" Guid="2615F81A-486B-4BEF-8198-DD4C8BBE07AD">
+                <File Id="OPENINGHOLE_POLYLINE.BMP" Name="OpeningHole_Polyline.bmp" Source=".\SmartDraw_PDS\Setup\Resource\OpeningHole_Polyline.bmp" />
+            </Component>
+            <Component Id="OUTSIDE_EQUIPMENT.BMP" Directory="RESOURCES" Guid="AA68E064-62EC-4922-84E9-D3ECD8D0BF87">
+                <File Id="OUTSIDE_EQUIPMENT.BMP" Name="outside_equipment.bmp" Source=".\SmartDraw_PDS\Setup\Resource\outside_equipment.bmp" />
+            </Component>
+            <Component Id="PLATFORM_HATCHING.BMP" Directory="RESOURCES" Guid="8C7ACC44-79DF-47D6-BBD3-70298FB77408">
+                <File Id="PLATFORM_HATCHING.BMP" Name="platform_hatching.bmp" Source=".\SmartDraw_PDS\Setup\Resource\platform_hatching.bmp" />
+            </Component>
+            <Component Id="REDUCER.BMP" Directory="RESOURCES" Guid="F9CC7292-96B9-4012-A34E-42F669A69BEC">
+                <File Id="REDUCER.BMP" Name="reducer.bmp" Source=".\SmartDraw_PDS\Setup\Resource\reducer.bmp" />
+            </Component>
+            <Component Id="REVISIONCHART.BMP" Directory="RESOURCES" Guid="801E0AF6-DCE7-4A8A-B7F3-345537C0317B">
+                <File Id="REVISIONCHART.BMP" Name="RevisionChart.bmp" Source=".\SmartDraw_PDS\Setup\Resource\RevisionChart.bmp" />
+            </Component>
+            <Component Id="SLOPE_MARK.BMP" Directory="RESOURCES" Guid="5D577AC5-9E33-413A-A52B-7797CD530203">
+                <File Id="SLOPE_MARK.BMP" Name="slope_mark.bmp" Source=".\SmartDraw_PDS\Setup\Resource\slope_mark.bmp" />
+            </Component>
+            <Component Id="VALVE.BMP" Directory="RESOURCES" Guid="5BFCAF76-FDD5-4A01-A676-7D440467C9A6">
+                <File Id="VALVE.BMP" Name="valve.bmp" Source=".\SmartDraw_PDS\Setup\Resource\valve.bmp" />
+            </Component>
+            <Component Id="VIEW_ANNO_OPTION1.BMP" Directory="RESOURCES" Guid="8A04BDB3-DD6E-43A7-99B0-5E39B3485482">
+                <File Id="VIEW_ANNO_OPTION1.BMP" Name="view_anno_option1.bmp" Source=".\SmartDraw_PDS\Setup\Resource\view_anno_option1.bmp" />
+            </Component>
+            <Component Id="VIEW_ANNO_OPTION2.BMP" Directory="RESOURCES" Guid="03018A2C-A700-4F3C-86CC-808411FB4C6E">
+                <File Id="VIEW_ANNO_OPTION2.BMP" Name="view_anno_option2.bmp" Source=".\SmartDraw_PDS\Setup\Resource\view_anno_option2.bmp" />
+            </Component>
+            <Component Id="VIEW_ANNO_OPTION3.BMP" Directory="RESOURCES" Guid="6AC02798-E0D7-405B-8A40-9D0B06FE96A9">
+                <File Id="VIEW_ANNO_OPTION3.BMP" Name="view_anno_option3.bmp" Source=".\SmartDraw_PDS\Setup\Resource\view_anno_option3.bmp" />
+            </Component>
+            <Component Id="ACAD.LIN" Directory="SETTING" Guid="71E2409A-DA51-47E7-99D7-BA608AF9C291">
+                <File Id="ACAD.LIN" Name="acad.lin" Source=".\SmartDraw_PDS\Setup\Setting\acad.lin" />
+            </Component>
+            <Component Id="AUTOCAD.LST" Directory="SETTING" Guid="46E7BDC9-9B0C-4BFB-8AA5-46789FCF765D">
+                <File Id="AUTOCAD.LST" Name="AUTOCAD.LST" Source=".\SmartDraw_PDS\Setup\Setting\AUTOCAD.LST" />
+            </Component>
+            <Component Id="AUTOCAD.LWT" Directory="SETTING" Guid="DA10DE17-E5EC-462E-9175-240079D63D18">
+                <File Id="AUTOCAD.LWT" Name="AUTOCAD.LWT" Source=".\SmartDraw_PDS\Setup\Setting\AUTOCAD.LWT" />
+            </Component>
+            <Component Id="AUTOCAD.PAL" Directory="SETTING" Guid="A7A3A9A7-3E00-4D5A-9C09-4C5CBBC3B569">
+                <File Id="AUTOCAD.PAL" Name="AUTOCAD.PAL" Source=".\SmartDraw_PDS\Setup\Setting\AUTOCAD.PAL" />
+            </Component>
+            <Component Id="INCH_TO_METRIC.TBL" Directory="SETTING" Guid="09911732-213B-4E10-A922-609BB8F3B612">
+                <File Id="INCH_TO_METRIC.TBL" Name="Inch_To_Metric.TBL" Source=".\SmartDraw_PDS\Setup\Setting\Inch_To_Metric.TBL" />
+            </Component>
+            <Component Id="MSTN.LST" Directory="SETTING" Guid="4137E4EA-CA63-4B1D-85EF-1B52ED26FC3E">
+                <File Id="MSTN.LST" Name="MSTN.LST" Source=".\SmartDraw_PDS\Setup\Setting\MSTN.LST" />
+            </Component>
+            <Component Id="MSTN.LWT" Directory="SETTING" Guid="FD4B56AD-8BA0-47EC-8A7C-F82C7845EC79">
+                <File Id="MSTN.LWT" Name="MSTN.LWT" Source=".\SmartDraw_PDS\Setup\Setting\MSTN.LWT" />
+            </Component>
+            <Component Id="MSTN.PAL" Directory="SETTING" Guid="47A3E76D-4BC7-496C-B9F3-1E28331A8ECD">
+                <File Id="MSTN.PAL" Name="MSTN.PAL" Source=".\SmartDraw_PDS\Setup\Setting\MSTN.PAL" />
+            </Component>
+            <Component Id="NOZZLECHART.INI" Directory="SETTING" Guid="DEA2D66A-B8BD-4445-A990-594B40D4FD8D">
+                <File Id="NOZZLECHART.INI" Name="NozzleChart.ini" Source=".\SmartDraw_PDS\Setup\Setting\NozzleChart.ini" />
+            </Component>
+            <Component Id="PAPERSIZE.DAT" Directory="SETTING" Guid="83C1273E-318C-4B90-B586-565877C4AC21">
+                <File Id="PAPERSIZE.DAT" Name="PaperSize.dat" Source=".\SmartDraw_PDS\Setup\Setting\PaperSize.dat" />
+            </Component>
+            <Component Id="PIPEDIAMETER.TBL" Directory="SETTING" Guid="73393DD0-BC71-43C9-B907-9753E50E004E">
+                <File Id="PIPEDIAMETER.TBL" Name="PipeDiameter.TBL" Source=".\SmartDraw_PDS\Setup\Setting\PipeDiameter.TBL" />
+            </Component>
+            <Component Id="REF.DB3" Directory="SETTING" Guid="7DB0A63E-801C-4F37-A92A-E7E823811D47">
+                <File Id="REF.DB3" Name="ref.db3" Source=".\SmartDraw_PDS\Setup\Setting\ref.db3" />
+            </Component>
+            <Component Id="SIZE.TBL" Directory="SETTING" Guid="277DB422-26BE-40AD-A7C0-13D80B720EBC">
+                <File Id="SIZE.TBL" Name="SIZE.TBL" Source=".\SmartDraw_PDS\Setup\Setting\SIZE.TBL" />
+            </Component>
+            <Component Id="SMARTDRAW.INI" Directory="SETTING" Guid="4DB2F77C-C52B-4D20-ABA7-00C630FEA4E4">
+                <File Id="SMARTDRAW.INI" Name="SmartDraw.ini" Source=".\SmartDraw_PDS\Setup\Setting\SmartDraw.ini" />
+            </Component>
+            <Component Id="SMARTDRAW_PROJECT.INI" Directory="SETTING" Guid="34DA9410-B396-41F8-A894-BFBD20B38277">
+                <File Id="SMARTDRAW_PROJECT.INI" Name="SmartDraw_Project.ini" Source=".\SmartDraw_PDS\Setup\Setting\SmartDraw_Project.ini" />
+            </Component>
+            <Component Id="STRING.TBL" Directory="SETTING" Guid="9B1B4257-927C-4487-809F-3D91FAEB15B5">
+                <File Id="STRING.TBL" Name="STRING.TBL" Source=".\SmartDraw_PDS\Setup\Setting\STRING.TBL" />
+            </Component>
+            <Component Id="COMPLEX.VFT" Directory="AUTOCAD_FONTS" Guid="CFE44BEC-C961-4495-883B-3D8A753A4643">
+                <File Id="COMPLEX.VFT" Name="complex.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\complex.vft" />
+            </Component>
+            <Component Id="CYRILLIC.VFT" Directory="AUTOCAD_FONTS" Guid="FB4A4DA0-FFC2-472F-87BF-7F98DC8261B9">
+                <File Id="CYRILLIC.VFT" Name="cyrillic.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\cyrillic.vft" />
+            </Component>
+            <Component Id="CYRILTLC.VFT" Directory="AUTOCAD_FONTS" Guid="722AFFCD-85CA-450A-9A2D-BAC2A43E9EA6">
+                <File Id="CYRILTLC.VFT" Name="cyriltlc.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\cyriltlc.vft" />
+            </Component>
+            <Component Id="GOTHICE.VFT" Directory="AUTOCAD_FONTS" Guid="4110640E-14A8-4699-BCBE-62883D625A25">
+                <File Id="GOTHICE.VFT" Name="gothice.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\gothice.vft" />
+            </Component>
+            <Component Id="GOTHICG.VFT" Directory="AUTOCAD_FONTS" Guid="313F8671-B698-466B-A681-2F41D46B6711">
+                <File Id="GOTHICG.VFT" Name="gothicg.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\gothicg.vft" />
+            </Component>
+            <Component Id="GOTHICI.VFT" Directory="AUTOCAD_FONTS" Guid="1F761476-7C98-4548-BE4B-BCD08587246C">
+                <File Id="GOTHICI.VFT" Name="gothici.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\gothici.vft" />
+            </Component>
+            <Component Id="GREEKC.VFT" Directory="AUTOCAD_FONTS" Guid="C8ADBB51-C28C-4804-B196-155D7B43159B">
+                <File Id="GREEKC.VFT" Name="greekc.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\greekc.vft" />
+            </Component>
+            <Component Id="GREEKS.VFT" Directory="AUTOCAD_FONTS" Guid="7A84DDD9-4FDF-43C8-A082-28A1ED3BF3B7">
+                <File Id="GREEKS.VFT" Name="greeks.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\greeks.vft" />
+            </Component>
+            <Component Id="ISO.VFT" Directory="AUTOCAD_FONTS" Guid="F4D644F7-D1BB-4921-992D-EA0E6F8991C1">
+                <File Id="ISO.VFT" Name="iso.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\iso.vft" />
+            </Component>
+            <Component Id="ITALIC.VFT" Directory="AUTOCAD_FONTS" Guid="2B406B52-EA51-4261-A6B0-9179771AAD25">
+                <File Id="ITALIC.VFT" Name="italic.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\italic.vft" />
+            </Component>
+            <Component Id="ITALICC.VFT" Directory="AUTOCAD_FONTS" Guid="739FC732-67F4-44F4-AEE2-0954248EA343">
+                <File Id="ITALICC.VFT" Name="italicc.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\italicc.vft" />
+            </Component>
+            <Component Id="ITALICT.VFT" Directory="AUTOCAD_FONTS" Guid="7FC6676D-3185-4724-A7AA-D6C604E9AC75">
+                <File Id="ITALICT.VFT" Name="italict.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\italict.vft" />
+            </Component>
+            <Component Id="MATH.VFT" Directory="AUTOCAD_FONTS" Guid="96DAC6B5-DD74-4B88-9781-86D5C13F1A9A">
+                <File Id="MATH.VFT" Name="math.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\math.vft" />
+            </Component>
+            <Component Id="METEO.VFT" Directory="AUTOCAD_FONTS" Guid="05BD6540-63DB-4108-BDFA-E2D618B02ABB">
+                <File Id="METEO.VFT" Name="meteo.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\meteo.vft" />
+            </Component>
+            <Component Id="MONOTXT.VFT" Directory="AUTOCAD_FONTS" Guid="3D07E12B-3A3C-4BD8-86D6-1072BD44CAAC">
+                <File Id="MONOTXT.VFT" Name="monotxt.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\monotxt.vft" />
+            </Component>
+            <Component Id="MUSIC.VFT" Directory="AUTOCAD_FONTS" Guid="7FE6AB18-92A6-467E-88E5-3B5A14818DAF">
+                <File Id="MUSIC.VFT" Name="music.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\music.vft" />
+            </Component>
+            <Component Id="ROMANC.VFT" Directory="AUTOCAD_FONTS" Guid="C1A9172A-B91B-408C-A284-EFF4B388D1D1">
+                <File Id="ROMANC.VFT" Name="romanc.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\romanc.vft" />
+            </Component>
+            <Component Id="ROMAND.VFT" Directory="AUTOCAD_FONTS" Guid="08B750E8-7661-475C-BF79-0C9996EF2BDD">
+                <File Id="ROMAND.VFT" Name="romand.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\romand.vft" />
+            </Component>
+            <Component Id="ROMANS.VFT" Directory="AUTOCAD_FONTS" Guid="E5E45AE2-8E1C-4A66-BEB4-736CC1FD0606">
+                <File Id="ROMANS.VFT" Name="romans.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\romans.vft" />
+            </Component>
+            <Component Id="ROMANT.VFT" Directory="AUTOCAD_FONTS" Guid="85DECE0F-8270-4B4F-815C-EF9B262CBCC8">
+                <File Id="ROMANT.VFT" Name="romant.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\romant.vft" />
+            </Component>
+            <Component Id="SCRIPTC.VFT" Directory="AUTOCAD_FONTS" Guid="25E91FD6-1A81-4C0C-A49D-3355ADD303CE">
+                <File Id="SCRIPTC.VFT" Name="scriptc.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\scriptc.vft" />
+            </Component>
+            <Component Id="SCRIPTS.VFT" Directory="AUTOCAD_FONTS" Guid="61E5ECEA-5027-47F6-86AA-E99144C51017">
+                <File Id="SCRIPTS.VFT" Name="scripts.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\scripts.vft" />
+            </Component>
+            <Component Id="SIMPLEX.VFT" Directory="AUTOCAD_FONTS" Guid="ECA32DFC-30CD-4D63-8D9F-77553E3AFFB0">
+                <File Id="SIMPLEX.VFT" Name="simplex.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\simplex.vft" />
+            </Component>
+            <Component Id="SYASTRO.VFT" Directory="AUTOCAD_FONTS" Guid="782F32CA-C45E-4D2A-9B8B-7E9BDA88F67A">
+                <File Id="SYASTRO.VFT" Name="syastro.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\syastro.vft" />
+            </Component>
+            <Component Id="SYMAP.VFT" Directory="AUTOCAD_FONTS" Guid="F2D74489-DFEA-4F4E-B4C4-5AC92C4901F9">
+                <File Id="SYMAP.VFT" Name="symap.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\symap.vft" />
+            </Component>
+            <Component Id="TXT.VFT" Directory="AUTOCAD_FONTS" Guid="D46A39B9-4473-40BC-AAEF-7F0EC039A8D1">
+                <File Id="TXT.VFT" Name="txt.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\AutoCAD\txt.vft" />
+            </Component>
+            <Component Id="_0.VFT" Directory="MSTN_FONTS" Guid="1975AF7F-3E98-4C39-B18A-BEB7F676814F">
+                <File Id="_0.VFT" Name="0.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\0.vft" />
+            </Component>
+            <Component Id="_1.VFT" Directory="MSTN_FONTS" Guid="8E6F5CFA-A086-4E4E-954B-923520F3BB8E">
+                <File Id="_1.VFT" Name="1.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\1.vft" />
+            </Component>
+            <Component Id="_23.VFT" Directory="MSTN_FONTS" Guid="C4C7014E-86C3-43D4-99F1-A76807150923">
+                <File Id="_23.VFT" Name="23.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\23.vft" />
+            </Component>
+            <Component Id="_3.VFT" Directory="MSTN_FONTS" Guid="42635F80-B12F-4915-89EC-ACCB560E1A7C">
+                <File Id="_3.VFT" Name="3.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\3.vft" />
+            </Component>
+            <Component Id="_42.VFT" Directory="MSTN_FONTS" Guid="C143D1B0-2CE8-4A3C-A87D-FC515959A565">
+                <File Id="_42.VFT" Name="42.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\42.vft" />
+            </Component>
+            <Component Id="_50.VFT" Directory="MSTN_FONTS" Guid="6AD1BFD2-D64A-4EFB-A861-DF043779B936">
+                <File Id="_50.VFT" Name="50.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\50.vft" />
+            </Component>
+            <Component Id="_7.VFT" Directory="MSTN_FONTS" Guid="02552481-0730-4608-B75D-551D291D5828">
+                <File Id="_7.VFT" Name="7.vft" Source=".\SmartDraw_PDS\Setup\Setting\Fonts\MSTN\7.vft" />
+            </Component>
+            <Component Id="DOTNETFX35SETUP.EXE" Directory="TEMP" Guid="550328E6-1E0B-48FF-9E2A-269343253475">
+                <File Id="DOTNETFX35SETUP.EXE" Name="dotnetfx35setup.exe" Source=".\SmartDraw_PDS\Setup\Temp\dotnetfx35setup.exe" />
+            </Component>
+            <Component Id="DOTNETFX40_FULL_SETUP.EXE" Directory="TEMP" Guid="092E61A2-CA37-47AC-AD35-99620CFF50E0">
+                <File Id="DOTNETFX40_FULL_SETUP.EXE" Name="dotNetFx40_Full_setup.exe" Source=".\SmartDraw_PDS\Setup\Temp\dotNetFx40_Full_setup.exe" />
+            </Component>
+            <Component Id="VCREDIST_VS2008_X86_SP1.EXE" Directory="TEMP" Guid="E7174803-0759-461A-9430-6F34F85364A1">
+                <File Id="VCREDIST_VS2008_X86_SP1.EXE" Name="vcredist_vs2008_x86_sp1.exe" Source=".\SmartDraw_PDS\Setup\Temp\vcredist_vs2008_x86_sp1.exe" />
+            </Component>
+            <Component Id="VCREDIST_VS2010_X86.EXE" Directory="TEMP" Guid="2D66DA7B-6585-496C-8EBD-A4D91C968975">
+                <File Id="VCREDIST_VS2010_X86.EXE" Name="vcredist_vs2010_x86.exe" Source=".\SmartDraw_PDS\Setup\Temp\vcredist_vs2010_x86.exe" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

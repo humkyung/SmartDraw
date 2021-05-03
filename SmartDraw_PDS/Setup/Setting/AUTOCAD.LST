@@ -1,0 +1,51 @@
+;;
+;;  AutoCAD Linetype Definition file
+;;  Version 2.0
+;;  Copyright 1991, 1992, 1993, 1994, 1996 by Autodesk, Inc.
+;;
+*CONTINUOUS,Continuous ________________________________
+*BORDER,Border __ __ . __ __ . __ __ . __ __ . __ __ .
+*BORDER2,Border (.5x) __.__.__.__.__.__.__.__.__.__.__.
+*BORDERX2,Border (2x) ____  ____  .  ____  ____  .  ___
+*CENTER,Center ____ _ ____ _ ____ _ ____ _ ____ _ ____
+*CENTER2,Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___
+*CENTERX2,Center (2x) ________  __  ________  __  _____
+*DASHDOT,Dash dot __ . __ . __ . __ . __ . __ . __ . __
+*DASHDOT2,Dash dot (.5x) _._._._._._._._._._._._._._._.
+*DASHDOTX2,Dash dot (2x) ____  .  ____  .  ____  .  ___
+*DASHED,Dashed __ __ __ __ __ __ __ __ __ __ __ __ __ _
+*DASHED2,Dashed (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+*DASHEDX2,Dashed (2x) ____  ____  ____  ____  ____  ___
+*DIVIDE,Divide ____ . . ____ . . ____ . . ____ . . ____
+*DIVIDE2,Divide (.5x) __..__..__..__..__..__..__..__.._
+*DIVIDEX2,Divide (2x) ________  .  .  ________  .  .  _
+*DOT,Dot . . . . . . . . . . . . . . . . . . . . . . . .
+*DOT2,Dot (.5x) ........................................
+*DOTX2,Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .  .
+*HIDDEN,Hidden __ __ __ __ __ __ __ __ __ __ __ __ __ __
+*HIDDEN2,Hidden (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+*HIDDENX2,Hidden (2x) ____ ____ ____ ____ ____ ____ ____ 
+*PHANTOM,Phantom ______  __  __  ______  __  __  ______ 
+*PHANTOM2,Phantom (.5x) ___ _ _ ___ _ _ ___ _ _ ___ _ _
+*PHANTOMX2,Phantom (2x) ____________    ____    ____   _
+*ACAD_ISO02W100,ISO dash __ __ __ __ __ __ __ __ __ __ __ __ __
+*ACAD_ISO03W100,ISO dash space __    __    __    __    __    __
+*ACAD_ISO04W100,ISO long-dash dot ____ . ____ . ____ . ____ . _
+*ACAD_ISO05W100,ISO long-dash double-dot ____ .. ____ .. ____ . 
+*ACAD_ISO06W100,ISO long-dash triple-dot ____ ... ____ ... ____
+*ACAD_ISO07W100,ISO dot . . . . . . . . . . . . . . . . . . . . 
+*ACAD_ISO08W100,ISO long-dash short-dash ____ __ ____ __ ____ _
+*ACAD_ISO09W100,ISO long-dash double-short-dash ____ __ __ ____
+*ACAD_ISO10W100,ISO dash dot __ . __ . __ . __ . __ . __ . __ . 
+*ACAD_ISO11W100,ISO double-dash dot __ __ . __ __ . __ __ . __ _
+*ACAD_ISO12W100,ISO dash double-dot __ . . __ . . __ . . __ . . 
+*ACAD_ISO13W100,ISO double-dash double-dot __ __ . . __ __ . . _
+*ACAD_ISO14W100,ISO dash triple-dot __ . . . __ . . . __ . . . _
+*ACAD_ISO15W100,ISO double-dash triple-dot __ __ . . . __ __ . .
+*FENCELINE1,Fenceline circle ----0-----0----0-----0----0-----0--
+*FENCELINE2,Fenceline square ----[]-----[]----[]-----[]----[]---
+*TRACKS,Tracks -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-
+*BATTING,Batting SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+*HOT_WATER_SUPPLY,Hot water supply ---- HW ---- HW ---- HW ----
+*GAS_LINE,Gas line ----GAS----GAS----GAS----GAS----GAS----GAS--
+*ZIGZAG,Zig zag /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/

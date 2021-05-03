@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeDebug|Win32">
+      <Configuration>UnicodeDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeRelease|Win32">
+      <Configuration>UnicodeRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>SmartDraw</ProjectName>
+    <ProjectGuid>{CD92E271-E3A0-4F61-BAC6-2E9FD29026AB}</ProjectGuid>
+    <RootNamespace>SmartDraw</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Setup\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Setup\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\boost\boost_1_58_0;..\..\..\istools;..\..\..\istools\inc;..\..\..\istools\inc\gui;..\..\..\istools\vftlib;..\..\..\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\istools\3rdparty\BugTrap;..\..\..\istools\3rdparty\sqlite3;..\..\..\istools\3rdparty\soci-3.2.3\core;..\..\..\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\..\..\istools\3rdparty\gsoap-2.8\gsoap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;MARKUP_STL;PYTHON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAsManaged>true</CompileAsManaged>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4248 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>SmartDrawModule_vc100_debug.lib;SmartDrawPDSModule_vc100_debug.lib;SmartDrawAnno_vc100_debug.lib;../Setup/SmartLMSLib_vc100_debug.lib;BugTrap.lib;sqlite3.lib;soci_sqlite3_3_2.lib;soci_core_3_2.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)\$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\boost\boost_1_58_0\lib32-msvc-10.0;..\..\..\istools\lib\vc100;..\..\lib;..\..\lib\soci_3_2_debug\VS2010;..\Setup;..\..\..\istools\3rdparty\BugTrap;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\istools;..\..\..\istools\inc;..\..\..\istools\inc\gui;..\..\..\istools\vftlib;..\..\..\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\istools\3rdparty\BugTrap;..\..\..\istools\3rdparty\sqlite3;..\..\..\istools\3rdparty\soci-3.2.3\core;..\..\..\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\..\..\istools\3rdparty\gsoap-2.8\gsoap;..\..\..\boost\boost_1_58_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;MARKUP_STL;PYTHON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc100.lib;SmartDrawPDSModule_vc100.lib;SmartDrawAnno_vc100.lib;BugTrap.lib;sqlite3.lib;soci_sqlite3_3_2.lib;soci_core_3_2.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)\$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\boost\boost_1_58_0\lib32-msvc-10.0;..\..\..\istools\lib\vc100;..\..\lib;..\..\lib\soci_3_2\VS2010;..\Setup;..\..\..\istools\3rdparty\BugTrap;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\boost\boost_1_58_0;..\..\..\istools;..\..\..\istools\inc;..\..\..\istools\inc\gui;..\..\..\istools\vftlib;..\..\..\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\istools\3rdparty\BugTrap;..\..\..\istools\3rdparty\sqlite3;..\..\..\istools\3rdparty\soci-3.2.3\core;..\..\..\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\..\..\istools\3rdparty\gsoap-2.8\gsoap;C:\Python27\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;MARKUP_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc90_debug.lib;SmartDrawPDSModule_vc90_debug.lib;SmartDrawAnno_vc90_debug.lib;../Setup/SmartLMSLib_vc90_debug.lib;BugTrap.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Setup\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\boost\boost_1_58_0\lib32-msvc-10.0;..\..\..\istools\lib\vc100;..\..\lib;..\..\lib\soci_3_2_debug\VS2010;..\Setup;..\..\..\istools\3rdparty\BugTrap;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\istools;..\..\..\istools\inc;..\..\..\istools\inc\gui;..\..\..\istools\vftlib;..\..\..\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\istools\3rdparty\BugTrap;..\..\..\istools\3rdparty\sqlite3;..\..\..\istools\3rdparty\soci-3.2.3\core;..\..\..\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\..\..\istools\3rdparty\gsoap-2.8\gsoap;C:\Python27\include;..\..\..\boost\boost_1_58_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;MARKUP_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>SmartDrawModule_vc90.lib;SmartDrawPDSModule_vc90.lib;SmartDrawAnno_vc90.lib;BugTrap.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Setup\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\boost\boost_1_58_0\lib32-msvc-10.0;..\..\..\istools\lib\vc100;..\..\lib;..\..\lib\soci_3_2\VS2010;..\Setup;..\..\..\istools\3rdparty\BugTrap;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="SmartDrawFramework, Version=1.0.0.1, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Setup\SmartDrawFramework.dll</HintPath>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnnoFilterDlg.cpp" />
+    <ClCompile Include="AnnoFilterGridCellButton.cpp" />
+    <ClCompile Include="AnnotationPage.cpp" />
+    <ClCompile Include="AreaOptionPage.cpp" />
+    <ClCompile Include="BorderPage.cpp" />
+    <ClCompile Include="BtnDataBase.cpp" />
+    <ClCompile Include="CADInteractive.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="DatabaseSettingPage.cpp" />
+    <ClCompile Include="DimensionPage.cpp" />
+    <ClCompile Include="DraFileSettingDlg.cpp" />
+    <ClCompile Include="DraTreeListCtrl.cpp" />
+    <ClCompile Include="DraViewSettingDlg.cpp" />
+    <ClCompile Include="EditTitleBlockDataDlg.cpp" />
+    <ClCompile Include="EquipmentHatchingPage.cpp" />
+    <ClCompile Include="FileBrowseGridCell.cpp" />
+    <ClCompile Include="FillMatchlineDataDlg.cpp" />
+    <ClCompile Include="Flow_SlopeMarkPage.cpp" />
+    <ClCompile Include="FolderSettingPage.cpp" />
+    <ClCompile Include="GenerateDraFromDrawingDlg.cpp" />
+    <ClCompile Include="GenerationPage.cpp" />
+    <ClCompile Include="GridBtnCell.cpp" />
+    <ClCompile Include="GridBtnCellBase.cpp" />
+    <ClCompile Include="GridNoPage.cpp" />
+    <ClCompile Include="HLRPage.cpp" />
+    <ClCompile Include="InsertRevNoDlg.cpp" />
+    <ClCompile Include="InsideEquipmentPage.cpp" />
+    <ClCompile Include="InsideViewLineNoPage.cpp" />
+    <ClCompile Include="InstrumentPage.cpp" />
+    <ClCompile Include="KeyPlanHatchingPage.cpp" />
+    <ClCompile Include="LineNoLabelFormatDlg.cpp" />
+    <ClCompile Include="LineNoPage.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="..\..\..\istools\src\util\Markup\Markup.cpp" />
+    <ClCompile Include="MyBitmapComboBox.cpp" />
+    <ClCompile Include="NewDraFileDlg.cpp" />
+    <ClCompile Include="NewProjectDlg.cpp" />
+    <ClCompile Include="NozzleChartPage.cpp" />
+    <ClCompile Include="NozzlePage.cpp" />
+    <ClCompile Include="OtherPage.cpp" />
+    <ClCompile Include="OutputWnd.cpp" />
+    <ClCompile Include="OutsideEquipmentPage.cpp" />
+    <ClCompile Include="OutsideViewLineNoPage.cpp" />
+    <ClCompile Include="PipeDiaEditorDlg.cpp" />
+    <ClCompile Include="PlatformHatchingPage.cpp" />
+    <ClCompile Include="PluginManager.cpp" />
+    <ClCompile Include="ProgressAnimationDlg.cpp" />
+    <ClCompile Include="ProjectExplorer.cpp" />
+    <ClCompile Include="ProjectSettingSheet.cpp" />
+    <ClCompile Include="PropertiesWnd.cpp" />
+    <ClCompile Include="ReducerPage.cpp" />
+    <ClCompile Include="RevisionChartPage.cpp" />
+    <ClCompile Include="RevisionManagerDlg.cpp" />
+    <ClCompile Include="RevisionSourceData.cpp" />
+    <ClCompile Include="singleinstance.cpp" />
+    <ClCompile Include="SmartDraw.cpp" />
+    <ClCompile Include="SmartDrawDoc.cpp" />
+    <ClCompile Include="SmartDrawDocData.cpp" />
+    <ClCompile Include="SmartDrawPropertySheet.cpp" />
+    <ClCompile Include="SmartDrawPropTabWnd.cpp" />
+    <ClCompile Include="SmartDrawView.cpp" />
+    <ClCompile Include="soapC.cpp" />
+    <ClCompile Include="soapLicWebServiceSoapProxy.cpp" />
+    <ClCompile Include="SpecialItemPage.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdsoap2.cpp" />
+    <ClCompile Include="StringTable.cpp" />
+    <ClCompile Include="StructurePage.cpp" />
+    <ClCompile Include="SupportPage.cpp" />
+    <ClCompile Include="TitleBlockPage.cpp" />
+    <ClCompile Include="ValvePage.cpp" />
+    <ClCompile Include="VerticalLineHatchingPage.cpp" />
+    <ClCompile Include="ViewAnnoPage.cpp" />
+    <ClCompile Include="ViewTree.cpp" />
+    <ClCompile Include="WorkStatusDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnnoFilterDlg.h" />
+    <ClInclude Include="AnnoFilterGridCellButton.h" />
+    <ClInclude Include="AnnotationPage.h" />
+    <ClInclude Include="AreaOptionPage.h" />
+    <ClInclude Include="BorderPage.h" />
+    <ClInclude Include="BtnDataBase.h" />
+    <ClInclude Include="CADInteractive.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="DatabaseSettingPage.h" />
+    <ClInclude Include="DimensionPage.h" />
+    <ClInclude Include="DraFileSettingDlg.h" />
+    <ClInclude Include="DraTreeListCtrl.h" />
+    <ClInclude Include="DraViewSettingDlg.h" />
+    <ClInclude Include="EditTitleBlockDataDlg.h" />
+    <ClInclude Include="EquipmentHatchingPage.h" />
+    <ClInclude Include="FileBrowseGridCell.h" />
+    <ClInclude Include="FileView.h" />
+    <ClInclude Include="FillMatchlineDataDlg.h" />
+    <ClInclude Include="Flow_SlopeMarkPage.h" />
+    <ClInclude Include="FolderSettingPage.h" />
+    <ClInclude Include="GenerateDraFromDrawingDlg.h" />
+    <ClInclude Include="GenerationPage.h" />
+    <ClInclude Include="GridBtnCell.h" />
+    <ClInclude Include="GridBtnCellBase.h" />
+    <ClInclude Include="GridNoPage.h" />
+    <ClInclude Include="HLRPage.h" />
+    <ClInclude Include="InsertRevNoDlg.h" />
+    <ClInclude Include="InsideEquipmentPage.h" />
+    <ClInclude Include="InsideViewLineNoPage.h" />
+    <ClInclude Include="InstrumentPage.h" />
+    <ClInclude Include="KeyPlanHatchingPage.h" />
+    <ClInclude Include="LineNoLabelFormatDlg.h" />
+    <ClInclude Include="LineNoPage.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MyBitmapComboBox.h" />
+    <ClInclude Include="NewDraFileDlg.h" />
+    <ClInclude Include="NewProjectDlg.h" />
+    <ClInclude Include="NozzleChartPage.h" />
+    <ClInclude Include="NozzlePage.h" />
+    <ClInclude Include="OtherPage.h" />
+    <ClInclude Include="OutputWnd.h" />
+    <ClInclude Include="OutsideEquipmentPage.h" />
+    <ClInclude Include="OutsideViewLineNoPage.h" />
+    <ClInclude Include="PipeDiaEditorDlg.h" />
+    <ClInclude Include="PlatformHatchingPage.h" />
+    <ClInclude Include="PluginManager.h" />
+    <ClInclude Include="ProgressAnimationDlg.h" />
+    <ClInclude Include="ProjectExplorer.h" />
+    <ClInclude Include="ProjectSettingSheet.h" />
+    <ClInclude Include="PropertiesWnd.h" />
+    <ClInclude Include="ReducerPage.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RevisionChartPage.h" />
+    <ClInclude Include="RevisionManagerDlg.h" />
+    <ClInclude Include="RevisionSourceData.h" />
+    <ClInclude Include="singleinstance.h" />
+    <ClInclude Include="SmartDraw.h" />
+    <ClInclude Include="SmartDrawDoc.h" />
+    <ClInclude Include="SmartDrawDocData.h" />
+    <ClInclude Include="SmartDrawPropertySheet.h" />
+    <ClInclude Include="SmartDrawPropTabWnd.h" />
+    <ClInclude Include="SmartDrawView.h" />
+    <ClInclude Include="soapH.h" />
+    <ClInclude Include="soapLicWebServiceSoapProxy.h" />
+    <ClInclude Include="SpecialItemPage.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StringTable.h" />
+    <ClInclude Include="StructurePage.h" />
+    <ClInclude Include="SupportPage.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TitleBlockPage.h" />
+    <ClInclude Include="ValvePage.h" />
+    <ClInclude Include="VerticalLineHatchingPage.h" />
+    <ClInclude Include="ViewAnnoPage.h" />
+    <ClInclude Include="ViewTree.h" />
+    <ClInclude Include="WorkStatusDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\add.ico" />
+    <None Include="res\aDraw_CableTray.ico" />
+    <None Include="res\aDraw_CableTrayDoc.ico" />
+    <None Include="res\area.ico" />
+    <None Include="res\area_option.bmp" />
+    <None Include="res\arrow1.bmp" />
+    <None Include="res\arrow2.bmp" />
+    <None Include="res\arrow3.bmp" />
+    <None Include="res\arrow4.bmp" />
+    <None Include="res\arrow5.bmp" />
+    <None Include="res\AutoCAD.bmp" />
+    <None Include="res\AutoCAD.ico" />
+    <None Include="res\border.ico" />
+    <None Include="res\box.bmp" />
+    <None Include="res\but_Cancel.ico" />
+    <None Include="res\but_Ok.ico" />
+    <None Include="res\buttons.bmp" />
+    <None Include="res\cable_tray.bmp" />
+    <None Include="res\cable_tray.ico" />
+    <None Include="res\class_view.ico" />
+    <None Include="res\class_view_hc.ico" />
+    <None Include="res\classview.bmp" />
+    <None Include="res\classview_hc.bmp" />
+    <None Include="res\database.ico" />
+    <None Include="res\delete.ico" />
+    <None Include="res\demo.bmp" />
+    <None Include="res\dimension.bmp" />
+    <None Include="res\dimension.ico" />
+    <None Include="res\distance.bmp" />
+    <None Include="res\distance.png" />
+    <None Include="res\down.ico" />
+    <None Include="res\dra.ico" />
+    <None Include="res\dra_menu.bmp" />
+    <None Include="res\Eqp_Hatching.ico" />
+    <None Include="res\equipment.bmp" />
+    <None Include="res\equipment.ico" />
+    <None Include="res\error.ico" />
+    <None Include="res\explorer.bmp" />
+    <None Include="res\explorer_hc.bmp" />
+    <None Include="res\file_view.ico" />
+    <None Include="res\file_view_hc.ico" />
+    <None Include="res\filelarge.bmp" />
+    <None Include="res\filesmall.bmp" />
+    <None Include="res\fileview.bmp" />
+    <None Include="res\fileview_hc.bmp" />
+    <None Include="res\filter.ico" />
+    <None Include="res\folder.ico" />
+    <None Include="res\generation.ico" />
+    <None Include="res\gif1.bin" />
+    <None Include="res\gif2.bin" />
+    <None Include="res\gif3.bin" />
+    <None Include="res\grid_no.ico" />
+    <None Include="res\hatching.ico" />
+    <None Include="res\HLR.ico" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\icon2.ico" />
+    <None Include="res\icon3.ico" />
+    <None Include="res\inside_view.ico" />
+    <None Include="res\instrument.ico" />
+    <None Include="res\key_plan.ico" />
+    <None Include="res\line_no.ico" />
+    <None Include="res\line_no_inside_view.bmp" />
+    <None Include="res\LoadingAutoCAD.bmp" />
+    <None Include="res\main.bmp" />
+    <None Include="res\mark.ico" />
+    <None Include="res\MatchLineData.bmp" />
+    <None Include="res\menuimages.bmp" />
+    <None Include="res\menuimages_hc.bmp" />
+    <None Include="res\mouse_pick.ico" />
+    <None Include="res\mstn.bmp" />
+    <None Include="res\mstnj.ico" />
+    <None Include="res\multi_boxes.bmp" />
+    <None Include="res\new.ico" />
+    <None Include="res\noarrow.bmp" />
+    <None Include="res\nozzle.ico" />
+    <None Include="res\nozzle_chart.ico" />
+    <None Include="res\open.ico" />
+    <None Include="res\other.ico" />
+    <None Include="res\output_wnd.ico" />
+    <None Include="res\output_wnd_hc.ico" />
+    <None Include="res\outside_view.ico" />
+    <None Include="res\PF_Hatching.ico" />
+    <None Include="res\plugin.ico" />
+    <None Include="res\project.bmp" />
+    <None Include="res\project.ico" />
+    <None Include="res\properties.bmp" />
+    <None Include="res\properties_hc.bmp" />
+    <None Include="res\properties_wnd.ico" />
+    <None Include="res\properties_wnd_hc.ico" />
+    <None Include="res\reducer.ico" />
+    <None Include="res\refresh.ico" />
+    <None Include="res\reset_activate_code.ico" />
+    <None Include="res\revision_chart.ico" />
+    <None Include="res\root.ico" />
+    <None Include="res\setting.ico" />
+    <None Include="res\Shortcut Overlay.ico" />
+    <None Include="res\SmartDraw.ico" />
+    <None Include="res\SmartDraw.rc2" />
+    <None Include="res\SmartDrawDoc.ico" />
+    <None Include="res\sort.bmp" />
+    <None Include="res\sort_hc.bmp" />
+    <None Include="res\special_item.ico" />
+    <None Include="res\structure.bmp" />
+    <None Include="res\structure.ico" />
+    <None Include="res\support.bmp" />
+    <None Include="res\support.ico" />
+    <None Include="res\TextStyle.bmp" />
+    <None Include="res\TextStyle.ico" />
+    <None Include="res\title_block.ico" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="res\tree.ico" />
+    <None Include="res\up.ico" />
+    <None Include="res\valve.ico" />
+    <None Include="res\view.ico" />
+    <None Include="res\view_blue.ico" />
+    <None Include="res\writelarge.bmp" />
+    <None Include="res\writesmall.bmp" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SmartDraw.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="SmartDraw.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartDraw", "SmartDrawX86.vcproj", "{CD92E271-E3A0-4F61-BAC6-2E9FD29026AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{30D58D17-AF42-457C-AD37-AAF687A83ACF} = {30D58D17-AF42-457C-AD37-AAF687A83ACF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartDrawPDSModule", "..\..\SmartDrawPDSModule\SmartDrawPDSModulex86.vcproj", "{EF90215B-9C91-44A3-84CF-7D5FE283882F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5346BAD2-3DD4-4101-BF45-3C988368A88F} = {5346BAD2-3DD4-4101-BF45-3C988368A88F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartDrawModule", "..\..\SmartDrawModule\SmartDrawModulex86.vcproj", "{5346BAD2-3DD4-4101-BF45-3C988368A88F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartDrawAnno", "..\..\SmartDrawAnno\SmartDrawAnnox86.vcproj", "{30D58D17-AF42-457C-AD37-AAF687A83ACF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F} = {EF90215B-9C91-44A3-84CF-7D5FE283882F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "..\UnitTest\UnitTest.vcproj", "{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{30D58D17-AF42-457C-AD37-AAF687A83ACF} = {30D58D17-AF42-457C-AD37-AAF687A83ACF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD92E271-E3A0-4F61-BAC6-2E9FD29026AB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD92E271-E3A0-4F61-BAC6-2E9FD29026AB}.Debug|Win32.Build.0 = Debug|Win32
+		{CD92E271-E3A0-4F61-BAC6-2E9FD29026AB}.Release|Win32.ActiveCfg = Release|Win32
+		{CD92E271-E3A0-4F61-BAC6-2E9FD29026AB}.Release|Win32.Build.0 = Release|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Debug|Win32.Build.0 = Debug|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Release|Win32.ActiveCfg = Release|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Release|Win32.Build.0 = Release|Win32
+		{5346BAD2-3DD4-4101-BF45-3C988368A88F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5346BAD2-3DD4-4101-BF45-3C988368A88F}.Debug|Win32.Build.0 = Debug|Win32
+		{5346BAD2-3DD4-4101-BF45-3C988368A88F}.Release|Win32.ActiveCfg = Release|Win32
+		{5346BAD2-3DD4-4101-BF45-3C988368A88F}.Release|Win32.Build.0 = Release|Win32
+		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.Debug|Win32.Build.0 = Debug|Win32
+		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.Release|Win32.ActiveCfg = Release|Win32
+		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.Release|Win32.Build.0 = Release|Win32
+		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Debug|Win32.Build.0 = Debug|Win32
+		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Release|Win32.ActiveCfg = Release|Win32
+		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

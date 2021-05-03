@@ -1,0 +1,74 @@
+#-----------------------------------------------------------------------
+#
+#  Copyright (1995) Bentley Systems, Inc., All rights reserved.
+#
+#  Application Make File
+#
+#    $Logfile:   J:/mdl/examples/cellpick/cellpick.mkv  $
+#   $Workfile:   cellpick.mke  $
+#   $Revision: 1.1 $
+#   	$Date: 2010/12/16 09:07:01 $
+#
+#  "MicroStation" is a registered trademark and "MDL" and "MicroCSL"
+#  are trademarks of Bentley Systems, Inc.
+#
+#  Limited permission is hereby granted to reproduce and modify this
+#  copyrighted material provided that the resulting code is used only
+#  in conjunction with Bentley Systems products under the terms of the
+#  license agreement provided therein, and that this notice is retained
+#  in its entirety in any such reproduction or modification.
+#
+#-----------------------------------------------------------------------
+appName = aCellModelingTool
+
+%if defined (_MakeFilePath)
+baseDir = $(_MakeFilePath)
+%else
+baseDir = ./
+%endif
+
+PrivateInc	= $(BaseDir)
+langSpec = $(baseDir)english/
+
+%include $(MS)\mdl\include\mdl.mki
+
+appObjects =$(o)$(appName).mo
+
+appRscs =	$(o)$(appName).mp \
+			$(baseDir)$(appName).rsc \
+            $(o)$(appName)typ.rsc
+#----------------------------------------------------------------------
+#   Define symbol for files included in our link and resource merge
+#----------------------------------------------------------------------
+$(appName)Objs =  \
+	$(o)$(appName).mo
+
+$(appName)Rscs = $(o)$(appName)typ.rsc \
+		$(o)$(appName).mp 
+
+$(o)$(appName)typ.r   : $(BaseDir)$(appName)typ.mt $(BaseDir)$(appName)Dlg.h
+
+$(o)$(appName)typ.rsc : $(o)$(appName)typ.r
+#---------------------------------------------
+#	Compile and link MDL Application
+#---------------------------------------------
+$(o)$(appName).mo	   : $(BaseDir)$(appName).cpp 
+
+$(o)$(appName).mp : $(appObjects)
+$(msg)
+> $(o)make.opt
+$(linkOpts) 
+-a$@
+$(appObjects)
+<
+$(MLinkCmd) @$(o)make.opt 
+~time
+
+$(mdlApps)$(appName)_V2.ma : $(appRscs)
+$(msg)
+> $(o)make.opt
+-o$@
+$(appRscs)
+<
+$(RLibCmd) @$(o)make.opt
+~time

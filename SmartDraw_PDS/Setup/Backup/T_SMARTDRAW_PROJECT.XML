@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<TABLE Name="T_SMARTDRAW_PROJECT" DataSourceType="ACCESS">
+	<COLUMN Name="C_PROJECT_NAME" DataType="$STRING(50)" />
+	<COLUMN Name="C_PROJECT_DESC" DataType="$STRING(250)" />
+	<COLUMN Name="C_PROJECT_UOR"  DataType="$STRING(16)" Default="DEFAULT '80'" />
+	<COLUMN Name="C_MODEL_OFFSET_X"  DataType="$STRING(16)" Default="DEFAULT '0'" />
+	<COLUMN Name="C_MODEL_OFFSET_Y"  DataType="$STRING(16)" Default="DEFAULT '0'" />
+	<COLUMN Name="C_MODEL_OFFSET_Z"  DataType="$STRING(16)" Default="DEFAULT '0'" />
+	<COLUMN Name="C_DRAWING_TYPE" DataType="$STRING(32)" />
+	<COLUMN Name="C_OUTPUT_FORMAT" DataType="$STRING(32)" />
+	<COLUMN Name="C_CAD_APPLICATION" DataType="$STRING(255)" />
+	<COLUMN Name="C_STATE" DataType="$STRING(8)" />
+	<COLUMN Name="C_PASSWORD" DataType="$STRING(50)" />
+	<COLUMN Name="UNIT" DataType="$STRING(16)" />
+	<COLUMN Name="CODE" DataType="$STRING(16)" />
+</TABLE>

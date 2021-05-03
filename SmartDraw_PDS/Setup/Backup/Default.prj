@@ -1,0 +1,20 @@
+[Folder]
+Drawing=
+Design DDL=
+EQP DDL=
+Pipe=
+Equipment=
+Structure=
+CableT=
+Misc=
+[Database]
+Type=Access
+Access File=
+Project_Database_Name=
+Project_Database_UserID=
+Project_Database_Password=
+Project_Database_Server=
+Design_Database_Name=
+Design_Database_UserID=
+Design_Database_Password=
+Design_Database_Server=

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Option Name="OpeningHole Options">
+	<Page Name="Border">
+		<Page Name="Title Block" />
+	</Page>
+	<Page Name="Area" />
+	<Page Name="Dimension Style">
+		<Page Name="Int Dim Style" />
+		<Page Name="Ext Dim Style" />
+	</Page>
+	<Page Name="Annotation">
+		<Page Name="Reducer" />
+		<Page Name="Structure" />
+		<Page Name="OpeningHole" />
+		<Page Name="Hatching">
+			<Page Name="Platform Hatching" />
+		</Page>
+	</Page>
+	<Page Name="Generation" />
+</Option>

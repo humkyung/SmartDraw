@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Option Name="CableTrayOption Options">
+	<Page Name="Border">
+		<Page Name="Title Block" />
+		<Page Name="KeyPlan Hatching" />
+	</Page>
+	<Page Name="Area" />
+	<Page Name="Dimension" />
+	<Page Name="Annotation">
+		<Page Name="Equipment" />
+		<Page Name="Structure" />
+		<Page Name="CableTray" />
+		<Page Name="Hatching" />
+	</Page>
+</Option>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Option Name="Piping Options" Display="Piping Options">
+	<Page Name="Border" Display="Border">
+		<Page Name="Title Block" Display="Title Block" />
+		<Page Name="Grid No." Display="Grid No." />
+		<Page Name="KeyPlan Hatching" Display="KeyPlan Hatching" />
+	</Page>
+	<Page Name="Area" Display="Area" />
+	<Page Name="Dimension Style" Display="Dimension">
+<!--
+		<Page Name="Int Dim Style" Display="Inside View Dim." />
+-->
+		<Page Name="Ext Dim Style" Display="Outside View Dim." />
+	</Page>
+	<Page Name="HLR" Display="HLR" />
+	<Page Name="Annotation" Display="Annotation">
+		<Page Name="Line No" Display="Line No">
+			<Page Name="Inside View" Display="Inside View" />
+			<Page Name="Outside View" Display="Outside View" />
+		</Page>
+		<Page Name="Equipment" Display="Equipment">
+			<Page Name="Inside Eqp" Display="Inside Eqp" />
+			<Page Name="Outside Eqp" Display="Outside Eqp" />
+		</Page>
+		<Page Name="Support" Display="Support" />
+		<Page Name="Nozzle" Display="Nozzle" />
+		<Page Name="Reducer" Display="Reducer" />
+		<Page Name="Structure" Display="Structure" />
+		<Page Name="Instrument" Display="Instrument" />
+		<Page Name="Valve" Display="Valve" />
+		<Page Name="Specialty" Display="Specialty" />
+		<Page Name="Hatching" Display="Hatching">
+			<Page Name="Vertical Line Hatching" Display="Vertical Pipe" />
+			<Page Name="Equipment Hatching" Display="Equipment" />
+			<Page Name="Platform Hatching" Display="Platform" />
+		</Page>
+		<Page Name="View Annotation" Display="View Anno" />
+	</Page>
+	<Page Name="Chart" Display="Chart">
+		<Page Name="Revision Chart" Display="Revision Chart" />
+		<Page Name="Nozzle Chart" Display="Nozzle Chart" />
+	</Page>
+	<Page Name="Generation" Display="Generation" />
+</Option>

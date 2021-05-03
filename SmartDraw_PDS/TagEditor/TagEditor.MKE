@@ -1,0 +1,108 @@
+ #------------------------------------------------------------------------
+#
+# MyApp MDL Make File
+#
+# Copyright (1993) Bentley Systems, Inc.
+#
+# Limited permission is hereby granted to reproduce and modify this	
+# copyrighted material provided that the resulting code is used only in	
+# conjunction with Bentley Systems products under the terms of the	
+# license agreement provided therein, and that this notice is retained	
+# in its entirety in any such reproduction or modification.		
+#
+#------------------------------------------------------------------------
+#------------------------------------------------------------------------
+# Define macros specific to this example
+#------------------------------------------------------------------------
+appName   = TagEditor
+baseDir    = ./
+objectDir  = $(MS)/mdl/objects/
+mdlLibs    = $(MS)/mdl/library/
+privateInc = $(baseDir)
+
+
+#------------------------------------------------------------------------
+# mdl.mki contains the default rules for creating .rsc, .mo, etc files
+#------------------------------------------------------------------------
+%include mdl.mki
+
+#------------------------------------------------------------------------
+# Define macros for files included in our link and resource merge
+#------------------------------------------------------------------------
+bclassObjs = \
+   $(objectDir)$(appName).mo \
+   $(objectDir)$(appName)Dim.mo \
+   $(mdlLibs)ditemlib.ml \
+   $(mdlLibs)mdllib.dlo
+
+bclassRscs = \
+    $(objectDir)$(appName).mp \
+    $(objectDir)$(appName)cmd.rsc \
+    $(objectDir)$(appName)mt.rsc
+
+#------------------------------------------------------------------------
+# Generate command table include & resource file using rcomp
+#------------------------------------------------------------------------
+$(baseDir)$(appName)cmd.h	    	: $(baseDir)$(appName)cmd.r
+
+$(objectDir)$(appName)cmd.rsc    	: $(baseDir)$(appName)cmd.r
+
+$(objectDir)$(appName)mt.r	: $(baseDir)$(appName)mt.mt $(baseDir)$(appName).h
+
+$(objectDir)$(appName)mt.rsc	: $(objectDir)$(appName)mt.r
+
+#------------------------------------------------------------------------
+# Create & compile the app's type resource using rsctype & rcomp
+#------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------
+# Compile the MDL source object file using mcomp
+#------------------------------------------------------------------------
+$(objectDir)$(appName).mo     : $(baseDir)$(appName).mc \
+			      $(baseDir)$(appName)cmd.h
+
+$(objectDir)$(appName)Dim.mo  : $(baseDir)$(appName)Dim.mc \
+			      $(baseDir)$(appName)cmd.h
+
+#----------------------------------------------------------------------
+#	The following section generates the MDL Program modu
+#	mlink. This module should contain ALL CODE resources and/or 
+#	libraries used by the application.
+#----------------------------------------------------------------------
+$(objectDir)$(appName).mp        : $(bclassObjs)
+        $(msg)
+        > $(objectDir)temp.cmd
+        -a$@
+        -s6000
+        $(linkOpts)
+        $(bclassObjs)
+        <
+        $(MLinkCmd) @$(objectDir)temp.cmd
+        ~time
+
+#----------------------------------------------------------------------
+#	The following section generates the MDL Intermediate module using 
+#	rlib. This module contains the MDL CODE module and any 
+#	non-translatable resource modules.
+#----------------------------------------------------------------------
+$(objectDir)$(appName).mi          : $(bclassRscs)
+        $(msg)
+        > $(objectDir)temp.cmd
+        -o$@
+        $(bclassRscs)
+        <
+        $(RLibCmd) @$(objectDir)temp.cmd
+        ~time
+
+#----------------------------------------------------------------------
+#	The last step to this makefile is to include the MANDATORY makefile
+#	used to compile the translatable resources and create the final
+#	MDL application. This file is typically located in the directory
+#	pointed to by the 'baseDir' macro defined by the user at the top
+#	of this file. The standard extension for this included makefile is
+#	'.mki' and the file is distributed as part of the Foreign Language
+#	Translation Kit.
+#----------------------------------------------------------------------
+
+%include $(baseDir)$(appName)rsc.mki

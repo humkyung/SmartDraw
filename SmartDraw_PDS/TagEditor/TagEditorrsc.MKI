@@ -1,0 +1,88 @@
+#----------------------------------------------------------------------
+#
+#   Current Revision:
+#   $Workfile:   myapprsc.mki  $
+#
+#   Copyright 1985-93, Bentley Systems, Inc.
+#
+#   Limited permission is hereby granted to reproduce and modify this
+#   copyrighted material provided that the resulting code is used only in
+#   conjunction with Bentley Systems products under the terms of the
+#   license agreement provided therein, and that this notice is retained
+#   in its entirety in any such reproduction or modification.
+#
+#----------------------------------------------------------------------
+
+#----------------------------------------------------------------------
+#   Redefine any "alternate" paths to locate include files via
+#   'altIncs' to 'privateInc'. This allows proper operation in
+#   the Foreign Language Translation Kit.
+#
+#   NOTE: This is only necessary if BSI is not defined at build time.
+#----------------------------------------------------------------------
+
+%ifndef BSI
+    miscApp = $(privateInc)
+%endif
+
+#----------------------------------------------------------------------
+#   These macros have to be defined here and in myapp.mke because
+#   when building the translated version of MicroStation only the .mki
+#   files are run.
+#----------------------------------------------------------------------
+appName		= TagEditor
+
+#----------------------------------------------------------------------
+#   The following defines the dependency list for translatable
+#   resources used by this application. Typically this includes any
+#   dialog definitions or message list resources.
+#   Typically these files are lib'd together into a file with a '.ma'
+#   extension. (Mdl Application)
+#
+#   NOTE: Dialog box resources should NOT contain literal strings for
+#   	  any type of label. Instead, ALL literal strings should be
+#         replaced by a definition found in an include file located
+#         in a directory pointed to by 'langSpec'.
+#----------------------------------------------------------------------
+
+maRscs = $(o)$(appName).mi	\
+     $(baseDir)$(appName)Icons.rsc     \
+   	 $(o)$(appName).rsc     \
+    	 $(o)$(appName)str.rsc 
+
+#------------------------------------------------------------------------
+# Create & compile the app's dialog resources using rcomp
+#------------------------------------------------------------------------
+
+$(o)$(appName).rsc	: $(baseDir)$(appName).r $(baseDir)$(appName).h \
+			    $(baseDir)$(appName)cmd.h $(langSpec)$(appName)txt.h \
+			  
+#----------------------------------------------------------------------
+#	The following section builds any translatable resource modules for
+#   the application.
+#----------------------------------------------------------------------
+
+$(o)$(appName)str.rsc		: $(langSpec)$(appName)str.r $(baseDir)$(appName).h
+
+
+#----------------------------------------------------------------------
+#   The final step in building the application is lib'ing the applications
+#   intermediate application with the translatable resources built in
+#   this makefile. This step generates the final, and possibly translated,
+#   MDL application.
+#----------------------------------------------------------------------
+
+$(mdlapps)$(appName).ma		: $(maRscs)
+    $(msg)
+    > $(o)make.opt
+    -o$@
+    $(maRscs)
+    <
+    $(RLibCmd) @$(o)make.opt
+    ~time
+
+# End of build.  NOTE: This line is helpful by terminating the
+#                      last rule with a blank line. This is necessary
+#                      to prevent concatenation with other '.mki'
+#                      rules in the Foreign Language Translation Kit.
+

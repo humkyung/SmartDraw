@@ -1,0 +1,36 @@
+#-----------------------------------------------------------------------
+#
+#  Copyright (1995) Bentley Systems, Inc., All rights reserved.
+#
+#  Application Make File
+#
+#    $Logfile:   J:/mdl/examples/cellpick/cellprsc.mkv  $
+#   $Workfile:   cellprsc.mki  $
+#   $Revision: 1.1 $
+#   	$Date: 2010/12/16 09:07:00 $
+#
+#  "MicroStation" is a registered trademark and "MDL" and "MicroCSL"
+#  are trademarks of Bentley Systems, Inc.
+#
+#  Limited permission is hereby granted to reproduce and modify this
+#  copyrighted material provided that the resulting code is used only
+#  in conjunction with Bentley Systems products under the terms of the
+#  license agreement provided therein, and that this notice is retained
+#  in its entirety in any such reproduction or modification.
+#
+#-----------------------------------------------------------------------
+cellPickRscs =   \
+    $(reqdObjs)cellpick.mi \
+    $(rscObjects)cellpick.rsc
+
+$(rscObjects)cellpick.rsc	: $(BaseDir)cellpick.r $(langspec)cellptxt.h \
+				  $(privateInc)cellpick.h
+
+$(mdlapps)cellpick.ma		: $(cellPickRscs)
+	$(msg)
+	> $(rscObjects)make.opt
+	-o$@
+	$(cellPickRscs)
+	<
+	$(rscLibCmd) @$(rscObjects)make.opt
+	~time
