@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartDrawPDSModule", "SmartDrawPDSModulex86.vcproj", "{EF90215B-9C91-44A3-84CF-7D5FE283882F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTestx86.vcproj", "{62BB3B35-5AAF-4FDD-B946-0268E9CA9503}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F} = {EF90215B-9C91-44A3-84CF-7D5FE283882F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Debug|Win32.Build.0 = Debug|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Release|Win32.ActiveCfg = Release|Win32
+		{EF90215B-9C91-44A3-84CF-7D5FE283882F}.Release|Win32.Build.0 = Release|Win32
+		{62BB3B35-5AAF-4FDD-B946-0268E9CA9503}.Debug|Win32.ActiveCfg = Debug|Win32
+		{62BB3B35-5AAF-4FDD-B946-0268E9CA9503}.Debug|Win32.Build.0 = Debug|Win32
+		{62BB3B35-5AAF-4FDD-B946-0268E9CA9503}.Release|Win32.ActiveCfg = Release|Win32
+		{62BB3B35-5AAF-4FDD-B946-0268E9CA9503}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

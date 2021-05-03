@@ -1,0 +1,6 @@
+; SmartDrawPDSModule.def : Declares the module parameters for the DLL.
+
+LIBRARY      "SmartDrawPDSModule_vc100_Debug"
+
+EXPORTS
+    ; Explicit exports can go here
