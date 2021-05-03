@@ -1,0 +1,6 @@
+; OpeningHoleDrawing.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CableTrayDrawing"
+
+EXPORTS
+    ; Explicit exports can go here

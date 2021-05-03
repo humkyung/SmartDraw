@@ -1,0 +1,257 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\OpeningHoleDrawing.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CABLE_TRAY_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        VERTGUIDE, 17
+        VERTGUIDE, 81
+        VERTGUIDE, 174
+        VERTGUIDE, 184
+        VERTGUIDE, 192
+        VERTGUIDE, 206
+        VERTGUIDE, 266
+        VERTGUIDE, 312
+        VERTGUIDE, 400
+        VERTGUIDE, 415
+        VERTGUIDE, 442
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+        HORZGUIDE, 30
+        HORZGUIDE, 34
+        HORZGUIDE, 64
+        HORZGUIDE, 193
+        HORZGUIDE, 252
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MOUSE_PICK          ICON                    "res\\mouse_pick.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CABLE_TRAY_PAGE DIALOGEX 0, 0, 524, 297
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_ROW_COUNT,81,140,93,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_ROW_HEIGHT,81,160,93,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_TEXT_STYLE,58,211,116,148,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_SORT | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button1",IDC_BUTTON_TEXT_COLOR,57,230,117,14
+    COMBOBOX        IDC_COMBO_ARROW_TYPE,58,250,116,109,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_SORT | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_ELEC_LABEL,266,34,65,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ELEC_EL_PREFIX,347,34,53,14,ES_AUTOHSCROLL
+    CONTROL         "ON",IDC_CHECK_ELEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,415,36,26,10
+    EDITTEXT        IDC_EDIT_ELEC_LINE_WEIGHT,311,55,89,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "ON",IDC_CHECK_ELEC_OUTLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,415,58,26,10
+    EDITTEXT        IDC_EDIT_ELEC_CABLE_TRAY_FILE_NAME,312,76,130,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_INST_LABEL,266,107,65,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_INST_EL_PREFIX,346,107,54,14,ES_AUTOHSCROLL
+    CONTROL         "ON",IDC_CHECK_INST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,415,110,26,10
+    EDITTEXT        IDC_EDIT_INST_LINE_WEIGHT,312,128,88,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "ON",IDC_CHECK_INST_OUTLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,415,130,26,10
+    EDITTEXT        IDC_EDIT_INST_CABLE_TRAY_FILE_NAME,312,150,130,14,ES_AUTOHSCROLL
+    CONTROL         "ON",IDC_CHECK_FITTING_TYPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,266,183,26,10
+    EDITTEXT        IDC_EDIT_CELL_LIBRARY_FILE_PATH,250,228,260,14,ES_AUTOHSCROLL | ES_READONLY
+    COMBOBOX        IDC_COMBO_ELEC_CELL_NAME,266,252,81,207,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button1",IDC_BUTTON_ELEC_HATCH_COLOR,266,270,82,14
+    COMBOBOX        IDC_COMBO_INST_CELL_NAME,428,252,81,206,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button1",IDC_BUTTON_INST_HATCH_COLOR,428,270,82,14
+    CONTROL         2003,IDC_STATIC,"Static",SS_BITMAP,7,7,178,109,WS_EX_CLIENTEDGE
+    GROUPBOX        "Item Property",IDC_STATIC,192,7,325,193
+    CTEXT           "Label",IDC_STATIC,270,22,57,8
+    CTEXT           "EL. Prefix",IDC_STATIC,350,22,46,8
+    LTEXT           "Tag On/Off",IDC_STATIC,404,22,38,8
+    LTEXT           "Elec. Cable Tray",IDC_STATIC,206,37,53,8
+    LTEXT           "Elec. Cable Tray File Name Rule",IDC_STATIC,206,79,102,8
+    LTEXT           "Inst. Cable Tray",IDC_STATIC,206,111,53,8
+    LTEXT           "Inst. Cable Tray File Name Rule",IDC_STATIC,206,153,102,8
+    LTEXT           "Fitting Type",IDC_STATIC,206,183,52,8
+    LTEXT           "Outline",IDC_STATIC,206,58,53,8
+    LTEXT           "Line Weight",IDC_STATIC,266,58,39,8
+    LTEXT           "Outline",IDC_STATIC,206,131,53,8
+    LTEXT           "Line Weight",IDC_STATIC,266,131,39,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,196,175,254,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,196,99,254,20
+    GROUPBOX        "Label Property",IDC_STATIC,7,195,177,74
+    LTEXT           "Text Style",IDC_STATIC,17,213,34,8
+    LTEXT           "Text Color",IDC_STATIC,17,233,34,8
+    LTEXT           "Arrow Type",IDC_STATIC,17,252,38,8
+    GROUPBOX        "Cell Name && Hatching Color",IDC_STATIC,192,208,325,82
+    LTEXT           "Cell File Path",IDC_STATIC,206,231,42,8
+    LTEXT           "Elec. Cell Name",IDC_STATIC,207,253,50,8
+    LTEXT           "Elec. Hatch Color",IDC_STATIC,207,272,56,8
+    LTEXT           "Inst. Cell Name",IDC_STATIC,369,254,50,8
+    LTEXT           "Inst. Hatch Color",IDC_STATIC,369,273,56,8
+    GROUPBOX        "Tag Property",IDC_STATIC,7,125,177,57
+    LTEXT           "Row Count : ",IDC_STATIC,17,143,58,8
+    LTEXT           "Row Height : ",IDC_STATIC,17,162,58,8
+    CONTROL         "ON",IDC_CHECK_UPDOWN_MARK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,372,183,26,10
+    LTEXT           "UpDown Mark",IDC_STATIC,312,183,52,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CABLE_TRAY          BITMAP                  "res\\cable_tray.bmp"
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,1,27
+ PRODUCTVERSION 1,1,1,27
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TechSun(c)"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.1.1.27"
+            VALUE "InternalName", "PipingDrawing.dll"
+            VALUE "LegalCopyright", "TechSun(c).  All rights reserved."
+            VALUE "OriginalFilename", "PipingDrawing.dll"
+            VALUE "ProductName", "PipingDrawing"
+            VALUE "ProductVersion", "1.1.1.27"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(949)
+#include "res\OpeningHoleDrawing.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

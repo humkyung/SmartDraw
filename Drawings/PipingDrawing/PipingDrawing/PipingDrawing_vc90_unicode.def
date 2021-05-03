@@ -1,0 +1,6 @@
+; OpeningHoleDrawing.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PipingDrawing_vc90_unicode"
+
+EXPORTS
+    ; Explicit exports can go here
