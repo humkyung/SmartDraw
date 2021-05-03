@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExtractDatabase_VS2010">
+</Property><Property Name="솔루션 파일" Value="D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\ExtractDatabase_VS2010.sln">
+</Property><Property Name="Date" Value="2016년 3월 3일 목요일">
+</Property><Property Name="Time" Value="오전 1:14:58">
+</Property></Properties><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="ExtractDatabase_VS2010.csproj" Description="프로젝트 파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\ExtractDatabase_VS2010.csproj(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="AbstractDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\AbstractDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="AppOleDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\AppOleDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="AppOracleDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\AppOracleDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="FormExtractOracle.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\FormExtractOracle.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="FormExtractOracle.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\FormExtractOracle.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Ini.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Ini.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Program.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Program.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Properties\AssemblyInfo.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Properties\AssemblyInfo.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Properties\Resources.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Properties\Resources.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Properties\Settings.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Properties\Settings.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Properties\Settings.settings" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Properties\Settings.settings(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="database.ico" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\database.ico(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="FormExtractOracle.resx" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\FormExtractOracle.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="Properties\Resources.resx" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\ExtractDatabase\ExtractDatabase\Backup\Properties\Resources.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="ExtractDatabase_VS2010.csproj" Description="프로젝트를 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="ExtractDatabase_VS2010" Source="ExtractDatabase_VS2010.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExtractDatabase_VS2010" Source="ExtractDatabase_VS2010.csproj" Description="검사 완료: 프로젝트 파일을 업그레이드할 필요가 없습니다.">
+</Event></UpgradeLog>

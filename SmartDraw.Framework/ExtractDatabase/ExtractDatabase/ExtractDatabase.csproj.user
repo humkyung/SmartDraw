@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>D:\Projects\SmartDraw\SmartDraw_PDS\Data\NSRP4\Setting\NSRP4.prj</StartArguments>
+  </PropertyGroup>
+</Project>

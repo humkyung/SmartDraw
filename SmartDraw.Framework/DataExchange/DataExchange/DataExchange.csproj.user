@@ -1,0 +1,8 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>Report F:\Temp\TVEP\Database\TVEP.db3 F:\Temp\TVEP\Setting\TVEP.xlsx</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>ElevationTypeBySpec D:\Projects\SmartDraw\SmartDraw_PDS\Data\TVEP\Database\TVEP.db3 D:\Projects\SmartDraw\SmartDraw_PDS\Data\TVEP\Database\TVEP.mdb</StartArguments>
+  </PropertyGroup>
+</Project>

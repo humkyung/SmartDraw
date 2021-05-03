@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DataExchange_VS2010">
+</Property><Property Name="솔루션 파일" Value="D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\DataExchange_VS2010.sln">
+</Property><Property Name="Date" Value="2016년 3월 3일 목요일">
+</Property><Property Name="Time" Value="오전 1:16:01">
+</Property></Properties><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="DataExchange_VS2010.csproj" Description="프로젝트 파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\DataExchange_VS2010.csproj(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="AbstractDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\AbstractDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="AppSQLiteDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\AppSQLiteDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="DataExchange.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\DataExchange.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="DataExchange.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\DataExchange.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Ini.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Ini.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Program.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Program.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Properties\AssemblyInfo.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Properties\AssemblyInfo.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Properties\Resources.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Properties\Resources.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Properties\Settings.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Properties\Settings.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="ReportCommand.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\ReportCommand.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="WaitDlgModeless.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\WaitDlgModeless.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="WaitDlgModeless.designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\WaitDlgModeless.designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Properties\Settings.settings" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Properties\Settings.settings(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="sqlite.ico" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\sqlite.ico(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="DataExchange.resx" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\DataExchange.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="Properties\Resources.resx" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\Properties\Resources.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="WaitDlgModeless.resx" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\DataExchange\DataExchange\Backup\WaitDlgModeless.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="DataExchange_VS2010.csproj" Description="프로젝트를 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="DataExchange_VS2010" Source="DataExchange_VS2010.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DataExchange_VS2010" Source="DataExchange_VS2010.csproj" Description="검사 완료: 프로젝트 파일을 업그레이드할 필요가 없습니다.">
+</Event></UpgradeLog>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SmartDraw.Framework_VS2010">
+</Property><Property Name="솔루션 파일" Value="D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\SmartDraw.Framework_VS2010.sln">
+</Property><Property Name="Date" Value="2016년 3월 3일 목요일">
+</Property><Property Name="Time" Value="오전 1:12:50">
+</Property></Properties><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="SmartDraw.Framework_VS2010.csproj" Description="프로젝트 파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\SmartDraw.Framework_VS2010.csproj(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="AbstractDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\AbstractDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="AppOracleDatabase.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\AppOracleDatabase.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="Ini.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\Ini.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="MyOracleConnection.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\MyOracleConnection.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="Properties\AssemblyInfo.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\Properties\AssemblyInfo.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="SmartDrawUserControl.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\SmartDrawUserControl.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="SmartDrawUserControl.Designer.cs" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\SmartDrawUserControl.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="SmartDrawUserControl.resx" Description="파일을 D:\Projects\SmartDraw\SmartDraw.Framework\SmartDraw.Framework\Backup\SmartDrawUserControl.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="SmartDraw.Framework_VS2010.csproj" Description="프로젝트를 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="SmartDraw.Framework_VS2010" Source="SmartDraw.Framework_VS2010.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SmartDraw.Framework_VS2010" Source="SmartDraw.Framework_VS2010.csproj" Description="검사 완료: 프로젝트 파일을 업그레이드할 필요가 없습니다.">
+</Event></UpgradeLog>
