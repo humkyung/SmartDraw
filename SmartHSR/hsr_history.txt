@@ -1,0 +1,2 @@
+* 1.5.0.13
+  SINGLE ELBOW의 CENTER LINE이 반 이상 보일때 WELD MARK가 출력되도록 수정.

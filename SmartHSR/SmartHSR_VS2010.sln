@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartHSR", "SmartHSR_VS2010.vcxproj", "{863671C7-4EF9-4654-8801-EF1DF100EF50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UnicodeRelease|Win32 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Debug|Win32.ActiveCfg = Debug|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Debug|Win32.Build.0 = Debug|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Release|Win32.ActiveCfg = Release|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Release|Win32.Build.0 = Release|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

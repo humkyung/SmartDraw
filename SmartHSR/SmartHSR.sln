@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartHSR", "SmartHSR.vcproj", "{863671C7-4EF9-4654-8801-EF1DF100EF50}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartHSRTestSuit", "unittest\unittest.vcproj", "{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UnicodeRelease|Win32 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Debug|Win32.ActiveCfg = Debug|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Debug|Win32.Build.0 = Debug|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Release|Win32.ActiveCfg = Release|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.Release|Win32.Build.0 = Release|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{863671C7-4EF9-4654-8801-EF1DF100EF50}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}.Debug|Win32.Build.0 = Debug|Win32
+		{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}.Release|Win32.ActiveCfg = Release|Win32
+		{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}.Release|Win32.Build.0 = Release|Win32
+		{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}.UnicodeRelease|Win32.ActiveCfg = UnicodeDebug|Win32
+		{E67AD08C-31B3-4C2C-9F4B-D59BF9D2801C}.UnicodeRelease|Win32.Build.0 = UnicodeDebug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
