@@ -1,0 +1,41 @@
+MV_AS--0
+
+rendering_parameters
+front	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+back	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+left	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+right	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+top	c:\program files\bentley\workspace\system\materials\pattern\skybluesmclouds.jpg
+bottom	c:\program files\bentley\workspace\system\materials\pattern\grassgreenlawn.jpg
+end
+
+palette pt-tutorials.pal
+
+assign
+water
+"Water" 7
+Pool lining
+"Pool" 4
+Pool line marking
+"Pool" 1
+Marble floor
+"Floor" 6
+Handrails
+"Pool" 2
+Glass Window
+"Windows" 7
+Flat walls
+"Walls" 48
+Ceiling
+"Ceiling" 48
+Green Glass
+"Objects" 74
+Matte White
+"Building" 4
+"Building" 102
+Red Chrome
+"Objects" 3
+"Objects" 75
+Walls - ex 1
+"Building" 0
+end

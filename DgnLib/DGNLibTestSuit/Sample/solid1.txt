@@ -1,0 +1,650 @@
+type next
+!      4    (5)  font lib. DATA               Level = 2 
+!              Words to follow = 112,  Block,Word = 5, 1; byte = 2048
+!              Range: low  = -2147483648, -2147483648, -2147483648
+!                     high = 2147483647, 2147483647, 2147483647
+!              Graphic group = 0
+!              Index to attributes = 98
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, nonew_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 0, weight = 0, style = 0 (Solid)
+!                 file = HPT_DD_IGDS:FONTLIB. 
+!
+type next
+!      5    (9)  extended DESIGN File Hdr     Level = 1 
+!              Words to follow = 766,  Block,Word = 5, 115; byte = 2276
+!
+type next
+!     18    (66) MS name map data (Style)     Level = 23 
+!              Words to follow = 758,  Block,Word = 10, 53; byte = 4712
+!              Range: low  = -2147483648, -2147483648, -2147483648
+!                     high = 2147483647, 2147483647, 2147483647
+!              Graphic group = 1
+!              Index to attributes = 744
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, locked
+!                 Class = 0 (Primary)
+!              Symbology: color = 0, weight = 0, style = 0 (Solid)
+!                          -5  { Cable / Tele }
+!
+type next
+!     19    (66) MS tcb data                  Level = 9 
+!              Words to follow = 598,  Block,Word = 13, 45; byte = 6232
+!              Range: low  = -2147483648, -2147483648, -2147483648
+!                     high = 2147483647, 2147483647, 2147483647
+!              Graphic group = 0
+!              Index to attributes = 584
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           modified, nonew_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 0, weight = 0, style = 0 (Solid)
+!
+type next
+!     20    (66) MS dimension data            Level = 1 
+!              Words to follow = 598,  Block,Word = 15, 133; byte = 7432
+!              Range: low  = -2147483648, -2147483648, -2147483648
+!                     high = 2147483647, 2147483647, 2147483647
+!              Graphic group = 0
+!              Index to attributes = 584
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           modified, nonew_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 0, weight = 0, style = 0 (Solid)
+!
+type next
+!     21    (66) MS view data                 Level = 7 
+!              Words to follow = 300,  Block,Word = 17, 221; byte = 8632
+!              Range: low  = -2147483648, -2147483648, -2147483648
+!                     high = 2147483647, 2147483647, 2147483647
+!              Graphic group = 0
+!              Index to attributes = 286
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           modified, nonew_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 0, weight = 0, style = 0 (Solid)
+!
+type next
+!     22    (66) MS multi-line data           Level = 22 
+!              Words to follow = 198,  Block,Word = 19, 11; byte = 9236
+!              Range: low  = -2147483648, -2147483648, -2147483648
+!                     high = 2147483647, 2147483647, 2147483647
+!              Graphic group = 0
+!              Index to attributes = 184
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           modified, nonew_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 0, weight = 0, style = 0 (Solid)
+!
+type next
+!     27    (4)  Line STRING                  Level = 3 
+!              Words to follow = 61,  Block,Word = 22, 29; byte = 10808
+!              Range: low  = 10400, -12864, -13399
+!                     high = 29752, -3325, 4171
+!              Graphic group = 0
+!              Index to attributes = 27
+!              Properties: nohole, snappable, planar, noview_ind, attributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 3, weight = 0, style = 0 (Solid)
+!                 Vertices = 4
+!                     20362, -12864, 4171
+!                     29752, -9298, -2396
+!                     19790, -3325, -13399
+!                     10400, -6890, -6832
+!              Attributes:
+!                 User Data Linkage:
+!                    user ID = 29, wtf = 19, class = 1, props = ---U
+!                     0000  0000  0023  8280  0325  
+!                     0000  0020  8020  0311  0000  
+!                     0023  8020  031b  0000  8003  
+!                     0100  0802  002e  
+!
+type next
+!     28    (4)  Line STRING                  Level = 3 
+!              Words to follow = 61,  Block,Word = 22, 92; byte = 10934
+!              Range: low  = 10400, -12864, -13399
+!                     high = 29752, -3325, 4171
+!              Graphic group = 0
+!              Index to attributes = 27
+!              Properties: nohole, snappable, planar, noview_ind, attributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 3, weight = 0, style = 0 (Solid)
+!                 Vertices = 4
+!                     20362, -12864, 4171
+!                     29752, -9298, -2396
+!                     19790, -3325, -13399
+!                     10400, -6890, -6832
+!              Attributes:
+!                 User Data Linkage:
+!                    user ID = 29, wtf = 19, class = 1, props = ---U
+!                     0000  0000  0022  8280  0326  
+!                     0000  0020  8020  031e  0000  
+!                     0022  8020  031b  0000  8003  
+!                     0100  0802  002e  
+!
+type next
+!     29    (22) Point STRING                 Level = 4 
+!              Words to follow = 79,  Block,Word = 22, 155; byte = 11060
+!              Range: low  = 24771, -6311, -7897
+!                     high = 24771, -6311, -7897
+!              Graphic group = 0
+!              Index to attributes = 17
+!              Properties: disjoint, snappable, planar, noview_ind, attributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 5, weight = 5, style = 0 (Solid)
+!                 Vertices = 1
+!                     24771, -6311, -7897
+!              Attributes:
+!                 RIS Linkage (29179): wtf = 7, class = 0, props = ---U
+!                    entity = 0, mslink key = 0, disp = 0
+!                     0000  
+!                 User Data Linkage:
+!                    user ID = 29, wtf = 39, class = 1, props = ---U
+!                     00cb  0000  0000  8260  031b  
+!                     0000  001f  8020  0006  0000  
+!                     0021  8020  0007  0000  8017  
+!                     0000  0000  0000  0000  42a0  
+!                     0000  0000  0000  0000  0000  
+!                     0000  0000  0000  0000  0000  
+!                     0000  0000  0000  0000  0000  
+!                     0000  0000  0000  
+!
+type next
+!     30    (4)  Line STRING                  Level = 3 
+!              Words to follow = 61,  Block,Word = 22, 236; byte = 11222
+!              Range: low  = 19790, -9298, -13399
+!                     high = 29752, 7221, 3330
+!              Graphic group = 0
+!              Index to attributes = 27
+!              Properties: nohole, snappable, planar, noview_ind, attributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 3, weight = 0, style = 0 (Solid)
+!                 Vertices = 4
+!                     19790, 7221, -7673
+!                     19790, -3325, -13399
+!                     29752, -9298, -2396
+!                     29752, 1247, 3330
+!              Attributes:
+!                 User Data Linkage:
+!                    user ID = 29, wtf = 19, class = 1, props = ---U
+!                     0000  0000  0022  8280  0327  
+!                     0000  0020  8020  031d  0000  
+!                     0022  8020  031b  0000  8003  
+!                     0100  0802  002e  
+!
+type next
+!     31    #2#  orphan CELL (noname)         Level = 0 
+!              Words to follow = 112,  Block,Word = 23, 43; byte = 11348
+!              Range: low  = 5391, -18488, -16452
+!                     high = 29752, 12846, 13399
+!              Graphic group = 0
+!              Index to attributes = 46
+!              Properties: orphan, nosnappable, planar, noview_ind, attributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Words in description = 1119
+!                 Classes = 0,4
+!                 Levels = 2
+!                 Origin:
+!                     24771, -6311, -7897
+!              Attributes:
+!                 RIS Linkage (29179): wtf = 7, class = 0, props = ---U
+!                    entity = 0, mslink key = 0, disp = 0
+!                     0000  
+!                 User Data Linkage:
+!                    user ID = 29, wtf = 43, class = 1, props = ---U
+!                     00f1  0000  0003  8250  032f  
+!                     0000  0022  8020  031b  0000  
+!                     800f  0000  0002  0001  7803  
+!                     0000  42b4  0000  45c8  0000  
+!                     0000  0000  0000  0000  0000  
+!                     0000  100f  2020  2020  2020  
+!                     2020  2020  2020  2020  2020  
+!                     2020  2020  2020  2020  2020  
+!                     2020  0000  
+!
+type next
+!     32    (22) Point STRING             (1) Level = 2 
+!              Words to follow = 59,  Block,Word = 23, 157; byte = 11576
+!              Range: low  = 10373, -11936, -10951
+!                     high = 24771, 9859, 2171
+!              Graphic group = 0
+!              Index to attributes = 45
+!              Properties: disjoint, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Vertices = 3
+!                     24771, -11936, -10951
+!                     24771, 9859, 882
+!                     10373, -11778, 2171
+!
+type next
+!     33    #14# Complex SHAPE            (1) Level = 2 
+!              Words to follow = 18,  Block,Word = 23, 218; byte = 11698
+!              Range: low  = 15354, -18488, -5450
+!                     high = 29752, 6872, 13399
+!              Graphic group = 0
+!              Index to attributes = 4
+!              Properties: nohole, nosnappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Words in description = 211
+!                 Number of elements = 4
+!
+type next
+!     34    (4)  Line STRING              (2) Level = 2 
+!              Words to follow = 65,  Block,Word = 23, 238; byte = 11738
+!              Range: low  = 20362, -18488, -5450
+!                     high = 29752, 6872, 12950
+!              Graphic group = 0
+!              Index to attributes = 51
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Vertices = 8
+!                     20362, 3306, 12950
+!                     20362, 3306, 12950
+!                     29752, 6872, 6384
+!                     29752, 6872, 6384
+!                     29752, -14923, -5450
+!                     29752, -14923, -5450
+!                     20362, -18488, 1117
+!                     20362, -18488, 1117
+!
+type next
+!     35    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 24, 49; byte = 11872
+!              Range: low  = 15354, -18488, 1116
+!                     high = 20362, -14452, 7672
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: 0.782, 1.28e-010, 0.623
+!                    1964967979, -499036995        0.297, 0.879, -0.373
+!                    -686410596, -174325630        -0.547, 0.477, 0.688
+!                 Origin:
+!                     15354.439, -20389.710, 4618.888
+!
+type next
+!     36    (4)  Line STRING              (2) Level = 2 
+!              Words to follow = 41,  Block,Word = 24, 99; byte = 11972
+!              Range: low  = 15354, -14765, 7673
+!                     high = 15354, -4219, 13399
+!              Graphic group = 0
+!              Index to attributes = 27
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Vertices = 4
+!                     15354, -14765, 7673
+!                     15354, -14765, 7673
+!                     15354, -4219, 13399
+!                     15354, -4219, 13399
+!
+type next
+!     37    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 24, 142; byte = 12058
+!              Range: low  = 15354, -4219, 11805
+!                     high = 20362, 3306, 13398
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: -4.67e-010, 0.782, 0.623
+!                    1512709018, 132493144         -0.879, 0.297, -0.373
+!                    -838238031, 1266175348        -0.477, -0.547, 0.688
+!                 Origin:
+!                     15354.439, 1404.969, 16452.399
+!
+type next
+!     38    #14# Complex SHAPE            (1) Level = 2 
+!              Words to follow = 18,  Block,Word = 24, 192; byte = 12158
+!              Range: low  = 5391, -12514, -16452
+!                     high = 19790, 12846, 2396
+!              Graphic group = 0
+!              Index to attributes = 4
+!              Properties: nohole, nosnappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Words in description = 211
+!                 Number of elements = 4
+!
+type next
+!     39    (4)  Line STRING              (2) Level = 2 
+!              Words to follow = 65,  Block,Word = 24, 212; byte = 12198
+!              Range: low  = 10400, -12514, -16452
+!                     high = 19790, 12846, 1948
+!              Graphic group = 0
+!              Index to attributes = 51
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Vertices = 8
+!                     10400, 9280, 1948
+!                     10400, 9280, 1948
+!                     19790, 12846, -4619
+!                     19790, 12846, -4619
+!                     19790, -8949, -16452
+!                     19790, -8949, -16452
+!                     10400, -12514, -9886
+!                     10400, -12514, -9886
+!
+type next
+!     40    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 25, 23; byte = 12332
+!              Range: low  = 5391, -12514, -9885
+!                     high = 10399, -8478, -3329
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: 0.782, 1.28e-010, 0.623
+!                    1964967979, -499036995        0.297, 0.879, -0.373
+!                    -686410596, -174325630        -0.547, 0.477, 0.688
+!                 Origin:
+!                     5391.785, -14415.789, -6383.738
+!
+type next
+!     41    (4)  Line STRING              (2) Level = 2 
+!              Words to follow = 41,  Block,Word = 25, 73; byte = 12432
+!              Range: low  = 5392, -8791, -3330
+!                     high = 5392, 1754, 2396
+!              Graphic group = 0
+!              Index to attributes = 27
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Vertices = 4
+!                     5392, -8791, -3330
+!                     5392, -8791, -3330
+!                     5392, 1754, 2396
+!                     5392, 1754, 2396
+!
+type next
+!     42    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 25, 116; byte = 12518
+!              Range: low  = 5391, 1754, 803
+!                     high = 10399, 9280, 2395
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: -4.67e-010, 0.782, 0.623
+!                    1512709018, 132493144         -0.879, 0.297, -0.373
+!                    -838238031, 1266175348        -0.477, -0.547, 0.688
+!                 Origin:
+!                     5391.785, 7378.890, 5449.772
+!
+type next
+!     43    #18# SURFACE                  (1) Level = 2 
+!              Words to follow = 19,  Block,Word = 25, 166; byte = 12618
+!              Range: low  = 19790, -14923, -16452
+!                     high = 29752, 12846, 6384
+!              Graphic group = 0
+!              Index to attributes = 5
+!              Properties: nohole, nosnappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Words in description = 122
+!                 Number of elements = 4
+!                 Surface Type = 0 (Surface of projection)
+!                 Number of boundaries = 1
+!
+type next
+!     44    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 25, 187; byte = 12660
+!              Range: low  = 29752, -14923, -5450
+!                     high = 29752, 6872, 6384
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     29752, 6872, 6384
+!                     29752, -14923, -5450
+!
+type next
+!     45    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 25, 217; byte = 12720
+!              Range: low  = 19790, -8949, -16452
+!                     high = 19790, 12846, -4619
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     19790, 12846, -4619
+!                     19790, -8949, -16452
+!
+type next
+!     46    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 25, 247; byte = 12780
+!              Range: low  = 19790, 6872, -4619
+!                     high = 29752, 12846, 6384
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 4 (Primary rule element)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     29752, 6872, 6384
+!                     19790, 12846, -4619
+!
+type next
+!     47    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 26, 21; byte = 12840
+!              Range: low  = 19790, -14923, -16452
+!                     high = 29752, -8949, -5450
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 4 (Primary rule element)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     29752, -14923, -5450
+!                     19790, -8949, -16452
+!
+type next
+!     48    #18# SURFACE                  (1) Level = 2 
+!              Words to follow = 19,  Block,Word = 26, 51; byte = 12900
+!              Range: low  = 5391, -18488, -9886
+!                     high = 20362, -8478, 7673
+!              Graphic group = 0
+!              Index to attributes = 5
+!              Properties: nohole, nosnappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Words in description = 162
+!                 Number of elements = 4
+!                 Surface Type = 0 (Surface of projection)
+!                 Number of boundaries = 1
+!
+type next
+!     49    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 26, 72; byte = 12942
+!              Range: low  = 15354, -18488, 1116
+!                     high = 20362, -14452, 7672
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: 0.782, 1.28e-010, 0.623
+!                    1964967979, -499036995        0.297, 0.879, -0.373
+!                    -686410596, -174325630        -0.547, 0.477, 0.688
+!                 Origin:
+!                     15354.439, -20389.710, 4618.888
+!
+type next
+!     50    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 26, 122; byte = 13042
+!              Range: low  = 5391, -12514, -9885
+!                     high = 10399, -8478, -3329
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: 0.782, 1.28e-010, 0.623
+!                    1964967979, -499036995        0.297, 0.879, -0.373
+!                    -686410596, -174325630        -0.547, 0.477, 0.688
+!                 Origin:
+!                     5391.785, -14415.789, -6383.738
+!
+type next
+!     51    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 26, 172; byte = 13142
+!              Range: low  = 10400, -18488, -9886
+!                     high = 20362, -12514, 1117
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 4 (Primary rule element)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     20362, -18488, 1117
+!                     10400, -12514, -9886
+!
+type next
+!     52    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 26, 202; byte = 13202
+!              Range: low  = 5392, -14765, -3330
+!                     high = 15354, -8791, 7673
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 4 (Primary rule element)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     15354, -14765, 7673
+!                     5392, -8791, -3330
+!
+type next
+!     53    #18# SURFACE                  (1) Level = 2 
+!              Words to follow = 19,  Block,Word = 26, 232; byte = 13262
+!              Range: low  = 5391, -4219, 803
+!                     high = 20362, 9280, 13399
+!              Graphic group = 0
+!              Index to attributes = 5
+!              Properties: nohole, nosnappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Words in description = 162
+!                 Number of elements = 4
+!                 Surface Type = 0 (Surface of projection)
+!                 Number of boundaries = 1
+!
+type next
+!     54    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 26, 253; byte = 13304
+!              Range: low  = 15354, -4219, 11805
+!                     high = 20362, 3306, 13398
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: -4.67e-010, 0.782, 0.623
+!                    1512709018, 132493144         -0.879, 0.297, -0.373
+!                    -838238031, 1266175348        -0.477, -0.547, 0.688
+!                 Origin:
+!                     15354.439, 1404.969, 16452.399
+!
+type next
+!     55    (16) circular ARC             (2) Level = 2 
+!              Words to follow = 48,  Block,Word = 27, 47; byte = 13404
+!              Range: low  = 5391, 1754, 803
+!                     high = 10399, 9280, 2395
+!              Graphic group = 0
+!              Index to attributes = 34
+!              Properties: nohole, snappable, planar, noview_ind, noattributes,
+!                           nomodified, new_element, nolocked
+!                 Class = 0 (Primary)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                 Angle: start = 0.000, sweep = 90.000
+!                 Axis: primary = 6400.000, secondary = 6400.000
+!                 Quaternion:             TMatrix: -4.67e-010, 0.782, 0.623
+!                    1512709018, 132493144         -0.879, 0.297, -0.373
+!                    -838238031, 1266175348        -0.477, -0.547, 0.688
+!                 Origin:
+!                     5391.785, 7378.890, 5449.772
+!
+type next
+!     56    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 27, 97; byte = 13504
+!              Range: low  = 5392, -4219, 2396
+!                     high = 15354, 1754, 13399
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 4 (Primary rule element)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     15354, -4219, 13399
+!                     5392, 1754, 2396
+!
+type next
+!     57    (3)  LINE                     (2) Level = 2 
+!              Words to follow = 28,  Block,Word = 27, 127; byte = 13564
+!              Range: low  = 10400, 3306, 1948
+!                     high = 20362, 9280, 12950
+!              Graphic group = 0
+!              Index to attributes = 14
+!              Properties: noinfinite, snappable, planar, noview_ind,
+!                           noattributes, nomodified, new_element, nolocked
+!                 Class = 4 (Primary rule element)
+!              Symbology: color = 2, weight = 0, style = 0 (Solid)
+!                    Points:
+!                     20362, 3306, 12950
+!                     10400, 9280, 1948
+!

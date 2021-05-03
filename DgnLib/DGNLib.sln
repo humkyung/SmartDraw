@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DGNLib", "DGNLib.vcproj", "{854A7757-278A-420B-9E7A-1A5A56C61328}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DGNLibTestSuit", "DGNLibTestSuit\DGNLibTestSuit.vcproj", "{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}"
+	ProjectSection(ProjectDependencies) = postProject
+		{854A7757-278A-420B-9E7A-1A5A56C61328} = {854A7757-278A-420B-9E7A-1A5A56C61328}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UnicodeDebug|Win32 = UnicodeDebug|Win32
+		UnicodeRelease|Win32 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.Debug|Win32.ActiveCfg = Debug|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.Debug|Win32.Build.0 = Debug|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.Release|Win32.ActiveCfg = Release|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.Release|Win32.Build.0 = Release|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{854A7757-278A-420B-9E7A-1A5A56C61328}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.Debug|Win32.Build.0 = Debug|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.Release|Win32.ActiveCfg = Release|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.Release|Win32.Build.0 = Release|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{AB3CA6F1-BF38-4A34-93D7-7A8A8025FC43}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

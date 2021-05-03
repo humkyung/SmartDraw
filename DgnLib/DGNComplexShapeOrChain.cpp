@@ -1,0 +1,21 @@
+// DGNComplexShapeOrChain.cpp: implementation of the CDGNComplexShapeOrChain class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include <DGNLib.h>
+#include "DGNComplexShapeOrChain.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CDGNComplexShapeOrChain::CDGNComplexShapeOrChain()
+{
+
+}
+
+CDGNComplexShapeOrChain::~CDGNComplexShapeOrChain()
+{
+
+}
