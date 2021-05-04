@@ -1,6 +1,9 @@
 # SmartDraw
 GA Drawing generation system for PDS
 
+# screenshots
+![Screenshot](./docs/new project.png)
+
 # roadmap
 1.1.6
  1. add option that don't generate equipment which has no nozzle
