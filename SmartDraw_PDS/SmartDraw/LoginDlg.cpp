@@ -11,13 +11,15 @@
 #include "enablebuddybutton.h"
 #include "SmartDrawDocData.h"
 #include "StringTable.h"
-#include "soapLicWebServiceSoapProxy.h"
-#include "LicWebServiceSoap.nsmap"
+///#include "soapLicWebServiceSoapProxy.h"
+///#include "LicWebServiceSoap.nsmap"
 
 #include <fstream>
 
+/*
 extern "C" __declspec(dllimport) int __stdcall Encode(LMS_ENCODE* param);
 extern "C" __declspec(dllimport) int __stdcall Decode(LMS_ENCODE* param);
+*/
 
 CString PrintMACaddress(unsigned char MACData[])
 {
@@ -102,7 +104,7 @@ void GenerateMachineKey()
 	AfxMessageBox(str);
 }
 
-CClientSocket CLoginDlg::m_oClientSocket;
+///CClientSocket CLoginDlg::m_oClientSocket;
 /******************************************************************************
     @author     humkyung
     @date       2012-04-22
@@ -247,8 +249,8 @@ BEGIN_MESSAGE_MAP(CLoginDlg, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON_SELECT_SERVER, &CLoginDlg::OnBnClickedButtonSelectServer)
 	ON_BN_CLICKED(IDOK, &CLoginDlg::OnBnClickedOk)
 	ON_EN_CHANGE(IDC_EDIT_FOLDER, &CLoginDlg::OnEnChangeEditFolder)
-	ON_MESSAGE(SMARTLMS_MSG, &CLoginDlg::OnReceiveMsg)
-	ON_BN_CLICKED(IDC_BUTTON_RESET_ACTIVATE_CODE, &CLoginDlg::OnBnClickedButtonRestActivateCode)
+	///ON_MESSAGE(SMARTLMS_MSG, &CLoginDlg::OnReceiveMsg)
+	///ON_BN_CLICKED(IDC_BUTTON_RESET_ACTIVATE_CODE, &CLoginDlg::OnBnClickedButtonRestActivateCode)
 END_MESSAGE_MAP()
 
 // CLoginDlg message handlers
@@ -659,6 +661,7 @@ void CLoginDlg::OnEnChangeEditFolder()
 	@author humkyung
 	@date   2013.11.13
 */
+/*
 LRESULT CLoginDlg::OnReceiveMsg(WPARAM wParam, LPARAM lParam)
 {
 	CCommandObject* pObj = (CCommandObject*)(wParam);
@@ -690,6 +693,7 @@ LRESULT CLoginDlg::OnReceiveMsg(WPARAM wParam, LPARAM lParam)
 
 	return 0L;
 }
+*/
 
 /**
 	@brief		reset activate code
@@ -697,7 +701,9 @@ LRESULT CLoginDlg::OnReceiveMsg(WPARAM wParam, LPARAM lParam)
 	@date		2014.05.15
 	@history	generate machine key 2019.04.09 by humkyung
 */
+/*
 void CLoginDlg::OnBnClickedButtonRestActivateCode()
 {
 	::GenerateMachineKey();
 }
+*/

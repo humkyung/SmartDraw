@@ -39,7 +39,7 @@
 #include "soci.h"
 #include "soci-sqlite3.h"
 
-#include "soapLicWebServiceSoapProxy.h"
+///#include "soapLicWebServiceSoapProxy.h"
 
 #include <fstream>
 using namespace std;
@@ -47,10 +47,10 @@ using namespace std;
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
+/*
 extern "C" __declspec(dllimport) int __stdcall Encode(LMS_ENCODE* param);
 extern "C" __declspec(dllimport) int __stdcall Decode(LMS_ENCODE* param);
-
+*/
 // CSmartDrawDoc
 
 IMPLEMENT_DYNCREATE(CSmartDrawDoc, CDocument)

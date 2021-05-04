@@ -151,7 +151,7 @@
     <ClCompile>
       <Optimization>MinSpace</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\..\istools;..\..\..\istools\inc;..\..\..\istools\inc\gui;..\..\..\istools\vftlib;..\..\..\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\istools\3rdparty\BugTrap;..\..\..\istools\3rdparty\sqlite3;..\..\..\istools\3rdparty\soci-3.2.3\core;..\..\..\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\..\..\istools\3rdparty\gsoap-2.8\gsoap;..\..\..\boost\boost_1_58_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\shared\istools;..\..\..\shared\istools\inc;..\..\..\shared\istools\inc\gui;..\..\..\shared\istools\vftlib;..\..\..\shared\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\shared\istools\3rdparty\BugTrap;..\..\..\shared\istools\3rdparty\sqlite3;..\..\..\shared\istools\3rdparty\soci-3.2.3\core;..\..\..\shared\istools\3rdparty\soci-3.2.3\backends\sqlite3;..\..\..\shared\istools\3rdparty\gsoap-2.8\gsoap;..\..\..\shared\boost\boost_1_58_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;MARKUP_STL;PYTHON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -168,7 +168,7 @@
     <Link>
       <AdditionalDependencies>SmartDrawModule_vc100.lib;SmartDrawPDSModule_vc100.lib;SmartDrawAnno_vc100.lib;BugTrap.lib;sqlite3.lib;soci_sqlite3_3_2.lib;soci_core_3_2.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(TargetDir)\$(TargetName).exe</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\boost\boost_1_58_0\lib32-msvc-10.0;..\..\..\istools\lib\vc100;..\..\lib;..\..\lib\soci_3_2\VS2010;..\Setup;..\..\..\istools\3rdparty\BugTrap;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\shared\boost\boost_1_58_0\lib32-msvc-10.0;..\..\..\shared\istools\lib\vc100;..\..\lib;..\..\lib\soci_3_2\VS2010;..\Setup;..\..\..\shared\istools\3rdparty\BugTrap;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -288,7 +288,7 @@
     <ClCompile Include="LineNoPage.cpp" />
     <ClCompile Include="LoginDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="..\..\..\istools\src\util\Markup\Markup.cpp" />
+    <ClCompile Include="Markup\Markup.cpp" />
     <ClCompile Include="MyBitmapComboBox.cpp" />
     <ClCompile Include="NewDraFileDlg.cpp" />
     <ClCompile Include="NewProjectDlg.cpp" />
@@ -316,8 +316,6 @@
     <ClCompile Include="SmartDrawPropertySheet.cpp" />
     <ClCompile Include="SmartDrawPropTabWnd.cpp" />
     <ClCompile Include="SmartDrawView.cpp" />
-    <ClCompile Include="soapC.cpp" />
-    <ClCompile Include="soapLicWebServiceSoapProxy.cpp" />
     <ClCompile Include="SpecialItemPage.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -325,7 +323,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="stdsoap2.cpp" />
     <ClCompile Include="StringTable.cpp" />
     <ClCompile Include="StructurePage.cpp" />
     <ClCompile Include="SupportPage.cpp" />
@@ -372,6 +369,7 @@
     <ClInclude Include="LineNoPage.h" />
     <ClInclude Include="LoginDlg.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Markup\Markup.h" />
     <ClInclude Include="MyBitmapComboBox.h" />
     <ClInclude Include="NewDraFileDlg.h" />
     <ClInclude Include="NewProjectDlg.h" />
@@ -400,8 +398,6 @@
     <ClInclude Include="SmartDrawPropertySheet.h" />
     <ClInclude Include="SmartDrawPropTabWnd.h" />
     <ClInclude Include="SmartDrawView.h" />
-    <ClInclude Include="soapH.h" />
-    <ClInclude Include="soapLicWebServiceSoapProxy.h" />
     <ClInclude Include="SpecialItemPage.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StringTable.h" />

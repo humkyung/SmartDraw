@@ -57,7 +57,7 @@ private:
 	CString m_rServerFolderPath;
 	map<STRING_T,ProjectInfo> m_ProjectInfoMap;
 
-	static CClientSocket m_oClientSocket;
+	///static CClientSocket m_oClientSocket;
 public:
 	CString GetServerFolderPath() const { return m_rServerFolderPath; }
 	afx_msg void OnBnClickedOk();

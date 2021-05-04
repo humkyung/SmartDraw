@@ -7,14 +7,16 @@
 #include <Util/FileTools.h>
 #include <Util/FileVersion.h>
 
-#include "soapLicWebServiceSoapProxy.h"
+///#include "soapLicWebServiceSoapProxy.h"
 
 #include <fstream>
 #include <vector>
 using namespace std;
 
+/*
 extern "C" __declspec(dllimport) int __stdcall Encode(LMS_ENCODE* param);
 extern "C" __declspec(dllimport) int __stdcall Decode(LMS_ENCODE* param);
+*/
 
 CSmartDrawDocData::CSmartDrawDocData(void)
 {

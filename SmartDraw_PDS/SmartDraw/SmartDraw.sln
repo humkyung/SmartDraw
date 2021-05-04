@@ -18,11 +18,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartDrawAnno", "..\..\Smar
 		{EF90215B-9C91-44A3-84CF-7D5FE283882F} = {EF90215B-9C91-44A3-84CF-7D5FE283882F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "..\UnitTest\UnitTest.vcproj", "{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{30D58D17-AF42-457C-AD37-AAF687A83ACF} = {30D58D17-AF42-457C-AD37-AAF687A83ACF}
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PipingDrawing", "..\..\Drawings\PipingDrawing\PipingDrawing\PipingDrawing.vcproj", "{F32EB7C5-4FB3-4566-BA62-4E6B84227926}"
 EndProject
 Global
@@ -65,14 +60,6 @@ Global
 		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
 		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
 		{30D58D17-AF42-457C-AD37-AAF687A83ACF}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Debug|Win32.Build.0 = Debug|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Release|Win32.ActiveCfg = Release|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.Release|Win32.Build.0 = Release|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
-		{DA7EE6E8-7BAD-47A5-B501-C6F71A055C5F}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
 		{F32EB7C5-4FB3-4566-BA62-4E6B84227926}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F32EB7C5-4FB3-4566-BA62-4E6B84227926}.Debug|Win32.Build.0 = Debug|Win32
 		{F32EB7C5-4FB3-4566-BA62-4E6B84227926}.Release|Win32.ActiveCfg = Release|Win32

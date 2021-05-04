@@ -136,7 +136,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="1"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\..\..\shared\istools;..\..\..\shared\istools\inc;..\..\..\shared\istools\inc\gui;..\..\..\shared\istools\vftlib;..\..\..\shared\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\shared\istools\3rdparty\BugTrap;..\..\..\shared\istools\3rdparty\sqlite3;&quot;..\..\..\shared\istools\3rdparty\soci-3.2.3\core&quot;;&quot;..\..\..\shared\istools\3rdparty\soci-3.2.3\backends\sqlite3&quot;;C:\Python27\include;..\..\..\shared\boost\boost_1_58_0"
+				AdditionalIncludeDirectories="..\..\..\shared\istools;..\..\..\shared\istools\inc;..\..\..\shared\istools\inc\gui;..\..\..\shared\istools\vftlib;..\..\..\shared\istools\DgnV7Lib;..\..\SmartDrawModule;..\..\SmartDrawPDSModule;..\..\SmartDrawAnno;..\..\SmartDrawRsc;..\..\..\shared\istools\3rdparty\BugTrap;..\..\..\shared\istools\3rdparty\sqlite3;&quot;..\..\..\shared\istools\3rdparty\soci-3.2.3\core&quot;;&quot;..\..\..\shared\istools\3rdparty\soci-3.2.3\backends\sqlite3&quot;;..\..\..\shared\boost\boost_1_58_0"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;MARKUP_STL;PYTHON"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"
@@ -162,7 +162,7 @@
 				AdditionalDependencies="SmartDrawModule_vc90.lib SmartDrawPDSModule_vc90.lib SmartDrawAnno_vc90.lib BugTrap.lib sqlite3.lib soci_sqlite3_3_2.lib soci_core_3_2.lib"
 				OutputFile="..\Setup\$(ProjectName).exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;..\..\..\shared\boost\boost_1_58_0\lib32-msvc-9.0&quot;;..\..\..\shared\istools\lib\vc90;..\..\lib;..\..\lib\soci_3_2;..\Setup;..\..\..\shared\istools\3rdparty\BugTrap;C:\Python27\libs"
+				AdditionalLibraryDirectories="&quot;..\..\..\shared\boost\boost_1_58_0\lib32-msvc-9.0&quot;;..\..\..\shared\istools\lib\vc90;..\..\lib;..\..\lib\soci_3_2;..\Setup;..\..\..\shared\istools\3rdparty\BugTrap"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -378,11 +378,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\AnnotationPage.cpp"
+				RelativePath=".\AnnoFilterDlg.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\AppDocPy.cpp"
+				RelativePath=".\AnnoFilterGridCellButton.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\AnnotationPage.cpp"
 				>
 			</File>
 			<File
@@ -431,6 +435,10 @@
 			</File>
 			<File
 				RelativePath=".\FileBrowseGridCell.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FillMatchlineDataDlg.cpp"
 				>
 			</File>
 			<File
@@ -562,14 +570,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\pyfromc.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\PythonCall.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\ReducerPage.cpp"
 				>
 			</File>
@@ -696,11 +696,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\AnnotationPage.h"
+				RelativePath=".\AnnoFilterDlg.h"
 				>
 			</File>
 			<File
-				RelativePath=".\AppDocPy.h"
+				RelativePath=".\AnnoFilterGridCellButton.h"
+				>
+			</File>
+			<File
+				RelativePath=".\AnnotationPage.h"
 				>
 			</File>
 			<File
@@ -753,6 +757,10 @@
 			</File>
 			<File
 				RelativePath=".\FileView.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FillMatchlineDataDlg.h"
 				>
 			</File>
 			<File
@@ -877,10 +885,6 @@
 			</File>
 			<File
 				RelativePath=".\PropertiesWnd.h"
-				>
-			</File>
-			<File
-				RelativePath=".\PythonCall.h"
 				>
 			</File>
 			<File

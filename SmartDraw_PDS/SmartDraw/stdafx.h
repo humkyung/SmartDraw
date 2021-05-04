@@ -57,8 +57,10 @@
 #ifdef	UNICODE
 #include <BugTrap.h>
 #endif
+/*
 #include "Socket/CommandObject.h"
 #include "Socket/ClientSocket.h"
+*/
 
 #include <string>
 #include <afxdlgs.h>
