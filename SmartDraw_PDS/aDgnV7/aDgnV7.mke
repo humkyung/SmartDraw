@@ -1,0 +1,76 @@
+#----------------------------------------------------------------------
+#   MDL Make File
+#   Workfile: aDgnV7.mke
+#----------------------------------------------------------------------
+
+appName = aDgnV7
+
+baseDir         = ./
+objectDir       = $(MS)/mdl/objects/
+outDir			= $(MS)/mdlapps/
+
+privateInc = $(baseDir)
+
+%include $(MS)/mdl/include/mdl.mki
+
+#----------------------------------------------------------------------
+#   Define symbol for files included in our link and resource merge
+#----------------------------------------------------------------------
+appObjects =$(o)$(appName).mo \
+					$(o)Dimension.mo \
+					$(o)Insert.mo \
+					$(o)Cloud.mo \
+					$(o)Utility.mo \
+					$(o)ScanCell.mo \
+					$(mdlLibs)ditemlib.dlo
+
+appRscs = $(o)$(appName)Type.rsc  \
+		  $(o)$(appName).mp 	
+		  	
+#---------------------------------------------
+#	Make resource to publish structure(s)
+#---------------------------------------------
+
+$(o)$(appName)Type.r   : $(BaseDir)$(appName)Type.mt
+
+$(o)$(appName)Type.rsc : $(o)$(appName)Type.r
+
+#---------------------------------------------
+#	Compile and link MDL Application
+#---------------------------------------------
+$(o)$(appName).mo : $(baseDir)$(appName).c
+
+$(o)Dimension.mo : $(baseDir)Dimension.c
+
+$(o)Insert.mo : $(baseDir)Insert.cpp
+
+$(o)Cloud.mo : $(baseDir)Cloud.cpp
+
+$(o)Utility.mo : $(baseDir)Utility.cpp
+
+$(o)ScanCell.mo : $(baseDir)ScanCell.cpp
+
+#---------------------------------------------
+# Generate application code file and intermediate application file
+#--------------------------------------------- 
+$(o)$(appName).mp : $(appObjects)
+  $(msg)
+  > $(o)make.opt
+  $(linkOpts) 
+  -a$@
+  $(appObjects)
+  <
+  $(MLinkCmd) @$(o)make.opt 
+  ~time
+
+#---------------------------------------------
+#	Merge Objects into one file
+#---------------------------------------------
+$(outDir)$(appName).ma : $(appRscs)
+  $(msg)
+  > $(o)make.opt
+  -o$@
+  $(appRscs)
+  <
+  $(RLibCmd) @$(o)make.opt
+  ~time
