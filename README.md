@@ -2,9 +2,9 @@
 GA Drawing generation system for PDS
 
 # screenshots
-![alt text](https://github.com/humkyung/SmartDraw/blob/main/Docs/login.png?raw=true "new project")
+![alt text](https://github.com/humkyung/SmartDraw/blob/main/Docs/login.png?raw=true "login")
 ![alt text](https://github.com/humkyung/SmartDraw/blob/main/Docs/new_project.png?raw=true "new project")
-![alt text](https://github.com/humkyung/SmartDraw/blob/main/Docs/smartdraw.png?raw=true "new project")
+![alt text](https://github.com/humkyung/SmartDraw/blob/main/Docs/smartdraw.png?raw=true "main screen")
 
 # roadmap
 1.1.6
