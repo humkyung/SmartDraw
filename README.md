@@ -2,7 +2,7 @@
 GA Drawing generation system for PDS
 
 # screenshots
-![Alt text](./docs/img.jpg?raw=true "Title")
+![Alt text](./docs/new project.png?raw=true "Title")
 
 # roadmap
 1.1.6
